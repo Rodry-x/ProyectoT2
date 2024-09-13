@@ -32,9 +32,11 @@
             this.textNotas = new System.Windows.Forms.TextBox();
             this.subTitelList = new System.Windows.Forms.Label();
             this.listBoxView = new System.Windows.Forms.ListBox();
-            this.botonSalir = new System.Windows.Forms.Button();
+            this.botonHome = new System.Windows.Forms.Button();
             this.botonGuardar = new System.Windows.Forms.Button();
             this.botonEliminar = new System.Windows.Forms.Button();
+            this.botonVaciar = new System.Windows.Forms.Button();
+            this.botonEditar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // tituloList
@@ -57,6 +59,7 @@
             this.textNotas.Size = new System.Drawing.Size(540, 22);
             this.textNotas.TabIndex = 1;
             this.textNotas.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textNotas.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textNotas_KeyDown);
             // 
             // subTitelList
             // 
@@ -74,19 +77,21 @@
             this.listBoxView.FormattingEnabled = true;
             this.listBoxView.ItemHeight = 16;
             this.listBoxView.Location = new System.Drawing.Point(20, 219);
+            this.listBoxView.Margin = new System.Windows.Forms.Padding(3, 16, 3, 16);
             this.listBoxView.Name = "listBoxView";
             this.listBoxView.Size = new System.Drawing.Size(540, 516);
             this.listBoxView.TabIndex = 3;
             this.listBoxView.SelectedIndexChanged += new System.EventHandler(this.listBoxView_SelectedIndexChanged);
+            this.listBoxView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBoxView_KeyDown);
             // 
-            // botonSalir
+            // botonHome
             // 
-            this.botonSalir.Location = new System.Drawing.Point(23, 24);
-            this.botonSalir.Name = "botonSalir";
-            this.botonSalir.Size = new System.Drawing.Size(54, 36);
-            this.botonSalir.TabIndex = 4;
-            this.botonSalir.Text = "Salir";
-            this.botonSalir.UseVisualStyleBackColor = true;
+            this.botonHome.Location = new System.Drawing.Point(23, 24);
+            this.botonHome.Name = "botonHome";
+            this.botonHome.Size = new System.Drawing.Size(92, 36);
+            this.botonHome.TabIndex = 4;
+            this.botonHome.Text = "Retoceder";
+            this.botonHome.UseVisualStyleBackColor = true;
             // 
             // botonGuardar
             // 
@@ -110,19 +115,41 @@
             this.botonEliminar.UseVisualStyleBackColor = false;
             this.botonEliminar.Click += new System.EventHandler(this.botonEliminar_Click);
             // 
+            // botonVaciar
+            // 
+            this.botonVaciar.Location = new System.Drawing.Point(536, 219);
+            this.botonVaciar.Name = "botonVaciar";
+            this.botonVaciar.Size = new System.Drawing.Size(24, 23);
+            this.botonVaciar.TabIndex = 7;
+            this.botonVaciar.Text = "X";
+            this.botonVaciar.UseVisualStyleBackColor = true;
+            this.botonVaciar.Click += new System.EventHandler(this.botonVaciar_Click);
+            // 
+            // botonEditar
+            // 
+            this.botonEditar.Location = new System.Drawing.Point(225, 143);
+            this.botonEditar.Name = "botonEditar";
+            this.botonEditar.Size = new System.Drawing.Size(64, 31);
+            this.botonEditar.TabIndex = 9;
+            this.botonEditar.Text = "Editar";
+            this.botonEditar.UseVisualStyleBackColor = true;
+            this.botonEditar.Click += new System.EventHandler(this.botonEditar_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
-            this.ClientSize = new System.Drawing.Size(572, 802);
+            this.ClientSize = new System.Drawing.Size(578, 824);
+            this.Controls.Add(this.botonVaciar);
             this.Controls.Add(this.botonEliminar);
             this.Controls.Add(this.botonGuardar);
-            this.Controls.Add(this.botonSalir);
+            this.Controls.Add(this.botonHome);
             this.Controls.Add(this.listBoxView);
             this.Controls.Add(this.subTitelList);
             this.Controls.Add(this.textNotas);
             this.Controls.Add(this.tituloList);
+            this.Controls.Add(this.botonEditar);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -137,9 +164,11 @@
         private System.Windows.Forms.TextBox textNotas;
         private System.Windows.Forms.Label subTitelList;
         private System.Windows.Forms.ListBox listBoxView;
-        private System.Windows.Forms.Button botonSalir;
+        private System.Windows.Forms.Button botonHome;
         private System.Windows.Forms.Button botonGuardar;
         private System.Windows.Forms.Button botonEliminar;
+        private System.Windows.Forms.Button botonVaciar;
+        private System.Windows.Forms.Button botonEditar;
     }
 }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,11 +23,26 @@ namespace ListaConPanel
             //listBoxView.Items.Add("Elemento 1");
             //listBoxView.Items.Add("Elemento 2");
         }
+        private void addTask()
+        {
+            if (textNotas.Text.Length > 0)
+            {
+                listBoxView.Items.Add(textNotas.Text);
+                textNotas.Text = string.Empty;
+            }
+        }
 
         private void botonGuardar_Click(object sender, EventArgs e)
         {
-            listBoxView.Items.Add(textNotas.Text);
-            textNotas.Text = string.Empty;
+            addTask();
+        }
+
+        private void textNotas_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                addTask();
+            }
         }
 
         private void listBoxView_SelectedIndexChanged(object sender, EventArgs e)
@@ -45,6 +61,30 @@ namespace ListaConPanel
             }
         }
 
+        private void botonEditar_Click(object sender, EventArgs e)
+        {
+            int indice = listBoxView.SelectedIndex;
+
+            if (indice != -1)
+            {
+                listBoxView.Items[indice] = textNotas.Text;
+                textNotas.Text = string.Empty;
+            }
+        }
+
+        private void botonVaciar_Click(object sender, EventArgs e)
+        {
+            listBoxView.Items.Clear();
+        }
+
+        private void textNotas_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                listBoxView.Items.Add(textNotas.Text);
+                textNotas.Text = string.Empty;
+            }
+        }
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -55,5 +95,17 @@ namespace ListaConPanel
 
         }
 
+        private void listBoxView_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Delete)
+            {
+                int indice = listBoxView.SelectedIndex;
+
+                if (indice != -1)
+                {
+                    listBoxView.Items.RemoveAt(indice);
+                }
+            }
+        }
     }
 }
