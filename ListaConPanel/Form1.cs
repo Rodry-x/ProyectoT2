@@ -1,13 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using ListaConPanel.Data;
+using ListaConPanel.Models;
 
 namespace ListaConPanel
 {
@@ -16,6 +10,11 @@ namespace ListaConPanel
         public Form1()
         {
             InitializeComponent();
+
+            // Configurar el ListBox
+            listBoxView.DataSource = DataStore.Tasks;
+            listBoxView.DisplayMember = "Name"; // Mostrar solo la propiedad 'Name' de cada tarea
+            listBoxView.ValueMember = "Id"; // Identificador
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -27,7 +26,12 @@ namespace ListaConPanel
         {
             if (textNotas.Text.Length > 0)
             {
-                listBoxView.Items.Add(textNotas.Text);
+                DataStore.Tasks.Add(new Task {
+                    Id = 1,
+                    Name = textNotas.Text,
+                    Description = "",
+                    Deadline = DateTime.Now.AddDays(1)
+                });
                 textNotas.Text = string.Empty;
             }
         }
