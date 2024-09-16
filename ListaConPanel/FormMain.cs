@@ -5,9 +5,9 @@ using ListaConPanel.Models;
 
 namespace ListaConPanel
 {
-    public partial class Form1 : Form
+    public partial class FormMain : Form
     {
-        public Form1()
+        public FormMain()
         {
             InitializeComponent();
 
@@ -16,12 +16,7 @@ namespace ListaConPanel
             listBoxView.DisplayMember = "Name"; // Mostrar solo la propiedad 'Name' de cada tarea
             listBoxView.ValueMember = "Id"; // Identificador
         }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            //adicionar elementos a la lista
-            //listBoxView.Items.Add("Elemento 1");
-            //listBoxView.Items.Add("Elemento 2");
-        }
+
         private void addTask()
         {
             if (textNotas.Text.Length > 0)
@@ -67,13 +62,8 @@ namespace ListaConPanel
 
         private void botonEditar_Click(object sender, EventArgs e)
         {
-            int indice = listBoxView.SelectedIndex;
-
-            if (indice != -1)
-            {
-                listBoxView.Items[indice] = textNotas.Text;
-                textNotas.Text = string.Empty;
-            }
+            ContainerForm mainForm = (ContainerForm)this.ParentForm;
+            mainForm.ShowForm(new EditorForm());
         }
 
         private void botonVaciar_Click(object sender, EventArgs e)
@@ -89,16 +79,6 @@ namespace ListaConPanel
                 textNotas.Text = string.Empty;
             }
         }
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void listBoxView_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Delete)
@@ -110,6 +90,12 @@ namespace ListaConPanel
                     listBoxView.Items.RemoveAt(indice);
                 }
             }
+        }
+
+        private void botonHome_Click(object sender, EventArgs e)
+        {
+            ContainerForm loginForm = (ContainerForm)this.ParentForm;
+            loginForm.ShowForm(new LoginForm());
         }
     }
 }
