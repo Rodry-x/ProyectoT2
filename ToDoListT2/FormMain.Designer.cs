@@ -1,4 +1,4 @@
-﻿namespace ListaConPanel
+﻿namespace ToDoListT2
 {
     partial class FormMain
     {

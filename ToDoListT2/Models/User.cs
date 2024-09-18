@@ -1,4 +1,4 @@
-﻿namespace ListaConPanel.Models
+﻿namespace ToDoListT2.Models
 {
     public class User
     {

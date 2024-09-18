@@ -1,6 +1,6 @@
-﻿namespace ListaConPanel
+﻿namespace ToDoListT2
 {
-    partial class EditorForm
+    partial class DetailsForm
     {
         /// <summary>
         /// Required designer variable.
@@ -80,7 +80,7 @@
             this.Controls.Add(this.btAccept);
             this.Controls.Add(this.txtEdit);
             this.Controls.Add(this.boxEdit);
-            this.Name = "EditorForm";
+            this.Name = "DetailsForm";
             this.Text = "editorForm";
             this.ResumeLayout(false);
             this.PerformLayout();

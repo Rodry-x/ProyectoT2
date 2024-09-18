@@ -1,4 +1,4 @@
-﻿namespace ListaConPanel
+﻿namespace ToDoListT2
 {
     partial class RegisterForm
     {
@@ -124,7 +124,6 @@
             this.Controls.Add(this.boxUser);
             this.Name = "registerForm";
             this.Text = "Registro";
-            this.Load += new System.EventHandler(this.registerForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

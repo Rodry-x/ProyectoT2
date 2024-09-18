@@ -1,4 +1,4 @@
-﻿namespace ListaConPanel
+﻿namespace ToDoListT2
 {
     partial class LoginForm
     {
@@ -28,36 +28,39 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.boxGmail = new System.Windows.Forms.TextBox();
-            this.boxPassword = new System.Windows.Forms.TextBox();
+            this.email_input = new System.Windows.Forms.TextBox();
+            this.password_input = new System.Windows.Forms.TextBox();
             this.textRegister = new System.Windows.Forms.LinkLabel();
             this.txtGmail = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.btAccess = new System.Windows.Forms.Button();
+            this.button_login = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // boxGmail
+            // email_input
             // 
-            this.boxGmail.Location = new System.Drawing.Point(167, 309);
-            this.boxGmail.Name = "boxGmail";
-            this.boxGmail.Size = new System.Drawing.Size(245, 22);
-            this.boxGmail.TabIndex = 0;
+            this.email_input.Location = new System.Drawing.Point(125, 251);
+            this.email_input.Margin = new System.Windows.Forms.Padding(2);
+            this.email_input.Name = "email_input";
+            this.email_input.Size = new System.Drawing.Size(185, 20);
+            this.email_input.TabIndex = 0;
             // 
-            // boxPassword
+            // password_input
             // 
-            this.boxPassword.Location = new System.Drawing.Point(167, 354);
-            this.boxPassword.Name = "boxPassword";
-            this.boxPassword.Size = new System.Drawing.Size(245, 22);
-            this.boxPassword.TabIndex = 1;
+            this.password_input.Location = new System.Drawing.Point(125, 288);
+            this.password_input.Margin = new System.Windows.Forms.Padding(2);
+            this.password_input.Name = "password_input";
+            this.password_input.Size = new System.Drawing.Size(185, 20);
+            this.password_input.TabIndex = 1;
             // 
             // textRegister
             // 
             this.textRegister.AutoSize = true;
             this.textRegister.LinkColor = System.Drawing.Color.Black;
-            this.textRegister.Location = new System.Drawing.Point(241, 478);
+            this.textRegister.Location = new System.Drawing.Point(181, 388);
+            this.textRegister.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.textRegister.Name = "textRegister";
-            this.textRegister.Size = new System.Drawing.Size(77, 16);
+            this.textRegister.Size = new System.Drawing.Size(60, 13);
             this.textRegister.TabIndex = 3;
             this.textRegister.TabStop = true;
             this.textRegister.Text = "Registrarse";
@@ -66,68 +69,72 @@
             // txtGmail
             // 
             this.txtGmail.AutoSize = true;
-            this.txtGmail.Location = new System.Drawing.Point(164, 290);
+            this.txtGmail.Location = new System.Drawing.Point(123, 236);
+            this.txtGmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtGmail.Name = "txtGmail";
-            this.txtGmail.Size = new System.Drawing.Size(48, 16);
+            this.txtGmail.Size = new System.Drawing.Size(38, 13);
             this.txtGmail.TabIndex = 4;
             this.txtGmail.Text = "Correo";
             // 
             // txtPassword
             // 
             this.txtPassword.AutoSize = true;
-            this.txtPassword.Location = new System.Drawing.Point(164, 335);
+            this.txtPassword.Location = new System.Drawing.Point(123, 272);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(76, 16);
+            this.txtPassword.Size = new System.Drawing.Size(61, 13);
             this.txtPassword.TabIndex = 5;
             this.txtPassword.Text = "Contraseña";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(274, 452);
+            this.label1.Location = new System.Drawing.Point(206, 367);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(17, 16);
+            this.label1.Size = new System.Drawing.Size(15, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "O";
             // 
-            // btAccess
+            // button_login
             // 
-            this.btAccess.Location = new System.Drawing.Point(219, 406);
-            this.btAccess.Name = "btAccess";
-            this.btAccess.Size = new System.Drawing.Size(133, 31);
-            this.btAccess.TabIndex = 2;
-            this.btAccess.Text = "Acceder";
-            this.btAccess.UseVisualStyleBackColor = true;
-            this.btAccess.Click += new System.EventHandler(this.btAccess_Click);
+            this.button_login.Location = new System.Drawing.Point(164, 330);
+            this.button_login.Margin = new System.Windows.Forms.Padding(2);
+            this.button_login.Name = "button_login";
+            this.button_login.Size = new System.Drawing.Size(100, 25);
+            this.button_login.TabIndex = 2;
+            this.button_login.Text = "Acceder";
+            this.button_login.UseVisualStyleBackColor = true;
+            this.button_login.Click += new System.EventHandler(this.button_login_Click);
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
-            this.ClientSize = new System.Drawing.Size(579, 825);
+            this.ClientSize = new System.Drawing.Size(434, 670);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtGmail);
             this.Controls.Add(this.textRegister);
-            this.Controls.Add(this.btAccess);
-            this.Controls.Add(this.boxPassword);
-            this.Controls.Add(this.boxGmail);
+            this.Controls.Add(this.button_login);
+            this.Controls.Add(this.password_input);
+            this.Controls.Add(this.email_input);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LoginForm";
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox boxGmail;
-        private System.Windows.Forms.TextBox boxPassword;
+        private System.Windows.Forms.TextBox email_input;
+        private System.Windows.Forms.TextBox password_input;
         private System.Windows.Forms.LinkLabel textRegister;
         private System.Windows.Forms.Label txtGmail;
         private System.Windows.Forms.Label txtPassword;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btAccess;
+        private System.Windows.Forms.Button button_login;
     }
 }

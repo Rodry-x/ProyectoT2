@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
-using ListaConPanel.Models;
+using ToDoListT2.Models;
 
-namespace ListaConPanel.Data
+namespace ToDoListT2.Data
 {
     public class DataStore
     {

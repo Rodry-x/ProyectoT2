@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Windows.Forms;
-using ListaConPanel.Data;
-using ListaConPanel.Models;
+using ToDoListT2.Data;
+using ToDoListT2.Helpers;
+using ToDoListT2.Models;
 
-namespace ListaConPanel
+namespace ToDoListT2
 {
-    public partial class FormMain : Form
+    public partial class FormMain: Form
     {
         public FormMain()
         {
@@ -62,22 +63,12 @@ namespace ListaConPanel
 
         private void botonEditar_Click(object sender, EventArgs e)
         {
-            ContainerForm mainForm = (ContainerForm)this.ParentForm;
-            mainForm.ShowForm(new EditorForm());
+            NavigationHelper.NavigateTo(new DetailsForm());
         }
 
         private void botonVaciar_Click(object sender, EventArgs e)
         {
             listBoxView.Items.Clear();
-        }
-
-        private void textNotas_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == (char)13)
-            {
-                listBoxView.Items.Add(textNotas.Text);
-                textNotas.Text = string.Empty;
-            }
         }
         private void listBoxView_KeyDown(object sender, KeyEventArgs e)
         {
@@ -94,8 +85,7 @@ namespace ListaConPanel
 
         private void botonHome_Click(object sender, EventArgs e)
         {
-            ContainerForm loginForm = (ContainerForm)this.ParentForm;
-            loginForm.ShowForm(new LoginForm());
+            NavigationHelper.NavigateTo(new LoginForm());
         }
     }
 }

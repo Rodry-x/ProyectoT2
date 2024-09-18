@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ListaConPanel.Properties
+namespace ToDoListT2.Properties
 {
 
 
