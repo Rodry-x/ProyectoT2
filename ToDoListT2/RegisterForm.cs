@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
-using ToDoListT2.Helpers;
+using Helpers;
 
-namespace ToDoListT2
+namespace AppForms
 {
     public partial class RegisterForm : Form
     {
@@ -18,7 +18,7 @@ namespace ToDoListT2
 
         private void btRegister_Click(object sender, EventArgs e)
         {
-            NavigationHelper.NavigateTo(new FormMain());
+            NavigationHelper.NavigateTo(new HomeForm());
         }
     }
 }

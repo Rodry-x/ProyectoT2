@@ -1,6 +1,7 @@
 ﻿using System.Windows.Forms;
+using AppForms;
 
-namespace ToDoListT2.Helpers
+namespace Helpers
 {
     public static class NavigationHelper
     {

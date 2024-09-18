@@ -1,12 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
-using ToDoListT2.Models;
+using Models;
 
-namespace ToDoListT2.Data
+namespace Data
 {
-    public class DataStore
+    public abstract class DataStore
     {
         public static BindingList<Task> Tasks { get; set; } = new BindingList<Task>();
         public static User User { get; set; } = new User();
+        public static string Token { get; set; } = "";
     }
 }

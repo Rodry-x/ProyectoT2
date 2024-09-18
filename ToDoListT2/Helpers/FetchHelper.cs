@@ -8,7 +8,7 @@ using System.Configuration;
 using System.Diagnostics;
 
 
-namespace ToDoListT2.Helpers
+namespace Helpers
 {
     public class FetchHelper: IDisposable
     {
@@ -93,6 +93,7 @@ namespace ToDoListT2.Helpers
                 string jsonResponse = await response.Content.ReadAsStringAsync();
                 Debug.WriteLine($"Response: {jsonResponse}");
                 TResponse responseData = JsonConvert.DeserializeObject<TResponse>(jsonResponse);
+
                 return responseData;
             }
             catch (Exception ex)

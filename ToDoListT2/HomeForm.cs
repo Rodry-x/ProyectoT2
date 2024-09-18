@@ -1,34 +1,38 @@
 ﻿using System;
 using System.Windows.Forms;
-using ToDoListT2.Data;
-using ToDoListT2.Helpers;
-using ToDoListT2.Models;
+using Data;
+using Helpers;
+using Models;
 
-namespace ToDoListT2
+namespace AppForms
 {
-    public partial class FormMain: Form
+    public partial class HomeForm: Form
     {
-        public FormMain()
+        public HomeForm()
         {
             InitializeComponent();
-
-            // Configurar el ListBox
-            listBoxView.DataSource = DataStore.Tasks;
-            listBoxView.DisplayMember = "Name"; // Mostrar solo la propiedad 'Name' de cada tarea
-            listBoxView.ValueMember = "Id"; // Identificador
         }
+        private void HomeForm_Load(object sender, EventArgs e)
+        {
+            msg_welcome.Text = $"Bienvenido, {DataStore.User.Name}";
 
+            listBoxView.DataSource = DataStore.Tasks;
+            listBoxView.DisplayMember = "Name";
+            listBoxView.ValueMember = "Id";
+        }
         private void addTask()
         {
-            if (textNotas.Text.Length > 0)
+            if (input_taskName.Text.Length > 0)
             {
-                DataStore.Tasks.Add(new Task {
+                var task = new Task
+                {
                     Id = 1,
-                    Name = textNotas.Text,
+                    Name = input_taskName.Text,
                     Description = "",
                     Deadline = DateTime.Now.AddDays(1)
-                });
-                textNotas.Text = string.Empty;
+                };
+                DataStore.Tasks.Add(task);
+                input_taskName.Text = string.Empty;
             }
         }
 

@@ -1,4 +1,4 @@
-﻿namespace ToDoListT2
+﻿namespace AppForms
 {
     partial class ContainerForm
     {

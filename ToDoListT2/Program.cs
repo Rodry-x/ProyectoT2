@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace ToDoListT2
+namespace AppForms
 {
     internal static class Program
     {

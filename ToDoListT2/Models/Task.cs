@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ToDoListT2.Models
+namespace Models
 {
     public class Task
     {

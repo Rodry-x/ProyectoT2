@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ToDoListT2.Properties
+namespace Properties
 {
 
 

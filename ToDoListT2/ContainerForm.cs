@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
-using ToDoListT2.Helpers;
+using Helpers;
 
-namespace ToDoListT2
+namespace AppForms
 {
     public partial class ContainerForm : Form
     {

@@ -1,18 +1,27 @@
 ﻿using System;
 using System.Windows.Forms;
-using ToDoListT2.Data;
-using ToDoListT2.Helpers;
+using Data;
+using Helpers;
+using Models;
 
-namespace ToDoListT2
+namespace AppForms
 {
     public class LoginBodyRequest
     {
         public string email { get; set; }
         public string password { get; set; }
     }
-    public abstract class LoginBodyResponse
+
+    public class ResponseUser
     {
-        public string token { get; }
+        public string id { get; set; }
+        public string name { get; set; }
+        public string email { get; set; }
+    }
+    public class LoginBodyResponse
+    {
+        public ResponseUser user { get; set; }
+        public string token { get; set; }
     }
     public partial class LoginForm : Form
     {
@@ -32,14 +41,22 @@ namespace ToDoListT2
                         email = email_input.Text,
                         password = password_input.Text
                     };
-                    var data = await fetchHelper.PostAsync<LoginBodyRequest, LoginBodyResponse>("auth/login", body);
-                    DataStore.User.Token = data.token;
-                    NavigationHelper.NavigateTo(new FormMain());
+                    var response = await fetchHelper.PostAsync<LoginBodyRequest, LoginBodyResponse>("auth/login", body);
+                    User user = new User
+                    {
+                        Id = response.user.id,
+                        Name = response.user.name,
+                        Email = response.user.email
+                    };
+                    DataStore.User = user;
+                    DataStore.Token = response.token;
+                    NavigationHelper.NavigateTo(new HomeForm());
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Ocurrió un error: {ex.Message}");
+                //
+                Console.WriteLine($"Error: {ex.Message}");
             }
         }
 
