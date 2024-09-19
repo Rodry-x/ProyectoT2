@@ -28,29 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.boxUser = new System.Windows.Forms.TextBox();
-            this.boxPassword = new System.Windows.Forms.TextBox();
+            this.name_input = new System.Windows.Forms.TextBox();
+            this.password_input = new System.Windows.Forms.TextBox();
             this.btRegister = new System.Windows.Forms.Button();
             this.textCancel = new System.Windows.Forms.LinkLabel();
             this.txtPassword = new System.Windows.Forms.Label();
             this.txtGmail = new System.Windows.Forms.Label();
-            this.boxGmail = new System.Windows.Forms.TextBox();
+            this.email_input = new System.Windows.Forms.TextBox();
             this.txtUser = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // boxUser
+            // name_input
             // 
-            this.boxUser.Location = new System.Drawing.Point(167, 357);
-            this.boxUser.Name = "boxUser";
-            this.boxUser.Size = new System.Drawing.Size(245, 22);
-            this.boxUser.TabIndex = 1;
+            this.name_input.Location = new System.Drawing.Point(167, 357);
+            this.name_input.Name = "name_input";
+            this.name_input.Size = new System.Drawing.Size(245, 22);
+            this.name_input.TabIndex = 1;
+            this.name_input.TextChanged += new System.EventHandler(this.boxUser_TextChanged);
             // 
-            // boxPassword
+            // password_input
             // 
-            this.boxPassword.Location = new System.Drawing.Point(167, 445);
-            this.boxPassword.Name = "boxPassword";
-            this.boxPassword.Size = new System.Drawing.Size(245, 22);
-            this.boxPassword.TabIndex = 2;
+            this.password_input.Location = new System.Drawing.Point(167, 445);
+            this.password_input.Name = "password_input";
+            this.password_input.Size = new System.Drawing.Size(245, 22);
+            this.password_input.TabIndex = 2;
             // 
             // btRegister
             // 
@@ -92,12 +93,12 @@
             this.txtGmail.TabIndex = 7;
             this.txtGmail.Text = "Correo";
             // 
-            // boxGmail
+            // email_input
             // 
-            this.boxGmail.Location = new System.Drawing.Point(167, 401);
-            this.boxGmail.Name = "boxGmail";
-            this.boxGmail.Size = new System.Drawing.Size(245, 22);
-            this.boxGmail.TabIndex = 8;
+            this.email_input.Location = new System.Drawing.Point(167, 401);
+            this.email_input.Name = "email_input";
+            this.email_input.Size = new System.Drawing.Size(245, 22);
+            this.email_input.TabIndex = 8;
             // 
             // txtUser
             // 
@@ -108,22 +109,23 @@
             this.txtUser.TabIndex = 9;
             this.txtUser.Text = "Usuario";
             // 
-            // registerForm
+            // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(579, 825);
             this.Controls.Add(this.txtUser);
-            this.Controls.Add(this.boxGmail);
+            this.Controls.Add(this.email_input);
             this.Controls.Add(this.txtGmail);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.textCancel);
             this.Controls.Add(this.btRegister);
-            this.Controls.Add(this.boxPassword);
-            this.Controls.Add(this.boxUser);
-            this.Name = "registerForm";
+            this.Controls.Add(this.password_input);
+            this.Controls.Add(this.name_input);
+            this.Name = "RegisterForm";
             this.Text = "Registro";
+            this.Load += new System.EventHandler(this.RegisterForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,13 +133,13 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox boxUser;
-        private System.Windows.Forms.TextBox boxPassword;
+        private System.Windows.Forms.TextBox name_input;
+        private System.Windows.Forms.TextBox password_input;
         private System.Windows.Forms.Button btRegister;
         private System.Windows.Forms.LinkLabel textCancel;
         private System.Windows.Forms.Label txtPassword;
         private System.Windows.Forms.Label txtGmail;
-        private System.Windows.Forms.TextBox boxGmail;
+        private System.Windows.Forms.TextBox email_input;
         private System.Windows.Forms.Label txtUser;
     }
 }

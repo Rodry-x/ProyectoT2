@@ -3,11 +3,13 @@ using System.Windows.Forms;
 using Data;
 using Helpers;
 using Models;
+using ToDoListT2;
 
 namespace AppForms
 {
     public partial class HomeForm: Form
     {
+        AddTaskForm ventana = new AddTaskForm();
         public HomeForm()
         {
             InitializeComponent();
@@ -19,34 +21,6 @@ namespace AppForms
             listBoxView.DataSource = DataStore.Tasks;
             listBoxView.DisplayMember = "Name";
             listBoxView.ValueMember = "Id";
-        }
-        private void addTask()
-        {
-            if (input_taskName.Text.Length > 0)
-            {
-                var task = new Task
-                {
-                    Id = 1,
-                    Name = input_taskName.Text,
-                    Description = "",
-                    Deadline = DateTime.Now.AddDays(1)
-                };
-                DataStore.Tasks.Add(task);
-                input_taskName.Text = string.Empty;
-            }
-        }
-
-        private void botonGuardar_Click(object sender, EventArgs e)
-        {
-            addTask();
-        }
-
-        private void textNotas_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                addTask();
-            }
         }
 
         private void listBoxView_SelectedIndexChanged(object sender, EventArgs e)
@@ -63,11 +37,6 @@ namespace AppForms
             {
                 listBoxView.Items.RemoveAt(indice);
             }
-        }
-
-        private void botonEditar_Click(object sender, EventArgs e)
-        {
-            NavigationHelper.NavigateTo(new DetailsForm());
         }
 
         private void botonVaciar_Click(object sender, EventArgs e)
@@ -90,6 +59,12 @@ namespace AppForms
         private void botonHome_Click(object sender, EventArgs e)
         {
             NavigationHelper.NavigateTo(new LoginForm());
+        }
+
+        private void button_add_task_Click(object sender, EventArgs e)
+        {
+            AddTaskForm addTask = new AddTaskForm();
+            addTask.Visible = true;
         }
     }
 }
