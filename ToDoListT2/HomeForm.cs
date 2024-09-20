@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using Data;
 using Helpers;
 using Models;
 using ToDoListT2;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace AppForms
 {
@@ -14,13 +16,38 @@ namespace AppForms
         {
             InitializeComponent();
         }
-        private void HomeForm_Load(object sender, EventArgs e)
+        private async void HomeForm_Load(object sender, EventArgs e)
         {
             msg_welcome.Text = $"Bienvenido, {DataStore.User.Name}";
 
             listBoxView.DataSource = DataStore.Tasks;
             listBoxView.DisplayMember = "Name";
             listBoxView.ValueMember = "Id";
+
+            
+            try
+            {
+                using (FetchHelper fetchHelper = new FetchHelper())
+                {
+                    fetchHelper.SetAuthorizationToken(DataStore.Token);
+                    var response = await fetchHelper.GetAsync<List<GetTasksItem>>("tasks");
+                    response.ForEach(task => {
+                        var taskItem = new TaskItem
+                        {
+                            Id = task.id,
+                            Name = task.name,
+                            Description = task.description,
+                            Deadline = task.Deadline
+                        };
+                        DataStore.Tasks.Add(taskItem);
+                    });
+                }
+            }
+            catch (Exception ex)
+            {
+                //
+                Console.WriteLine($"Error: {ex.Message}");
+            }
         }
 
         private void listBoxView_SelectedIndexChanged(object sender, EventArgs e)
@@ -56,8 +83,9 @@ namespace AppForms
             }
         }
 
-        private void botonHome_Click(object sender, EventArgs e)
+        private void logout_btn_Click(object sender, EventArgs e)
         {
+            DataStore.Clear();
             NavigationHelper.NavigateTo(new LoginForm());
         }
 

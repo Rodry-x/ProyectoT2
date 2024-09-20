@@ -13,20 +13,44 @@ namespace ToDoListT2
         {
             InitializeComponent();
         }
-        private void addTask()
+        private async void addTask()
         {
             if (input_taskName.Text.Length > 0 && input_taskDescription.Text.Length > 0)
             {
-                var task = new Task
+                try
                 {
-                    Id = 1,
-                    Name = input_taskName.Text,
-                    Description = input_taskDescription.Text,
-                    Deadline = input_taskDateTime.Value
-                };
-                DataStore.Tasks.Add(task);
-                input_taskName.Text = string.Empty;
-                input_taskDescription.Text = string.Empty;
+                    using (FetchHelper fetchHelper = new FetchHelper())
+                    {
+                        var body = new CreateTaskBodyRequest
+                        {
+                            name = input_taskName.Text,
+                            description = input_taskDescription.Text,
+                            deadline = input_taskDateTime.Value
+
+                        };
+                        fetchHelper.SetAuthorizationToken(DataStore.Token);
+                        var response = await fetchHelper.PostAsync<CreateTaskBodyRequest, CreateTaskBodyResponse>("tasks", body);
+                        TaskItem task = new TaskItem
+                        {
+                            Id = response.id,
+                            Name = response.name,
+                            Description = response.description,
+                            Deadline = response.deadline
+                        };
+                        DataStore.Tasks.Add(task);
+                        this.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    //
+                    Console.WriteLine($"Error: {ex.Message}");
+                }
+            }
+            else 
+            {
+                msg_required1.Text = "Es Obligatorio";
+                msg_required2.Text = "Es Obligatorio";
             }
         }
 
@@ -38,7 +62,6 @@ namespace ToDoListT2
         private void button_save_Click(object sender, EventArgs e)
         {
             addTask();
-            this.Close();
         }
 
         private void button_cancel_Click(object sender, EventArgs e)

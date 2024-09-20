@@ -33,6 +33,7 @@ namespace AppForms
                     };
                     DataStore.User = user;
                     DataStore.Token = response.token;
+
                     NavigationHelper.NavigateTo(new HomeForm());
                 }
             }

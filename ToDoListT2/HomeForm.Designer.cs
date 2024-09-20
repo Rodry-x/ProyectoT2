@@ -31,7 +31,7 @@
             this.msg_welcome = new System.Windows.Forms.Label();
             this.subTitelList = new System.Windows.Forms.Label();
             this.listBoxView = new System.Windows.Forms.ListBox();
-            this.btLogOut = new System.Windows.Forms.Button();
+            this.logout_btn = new System.Windows.Forms.Button();
             this.botonEliminar = new System.Windows.Forms.Button();
             this.botonVaciar = new System.Windows.Forms.Button();
             this.button_add_task = new System.Windows.Forms.Button();
@@ -72,16 +72,16 @@
             this.listBoxView.SelectedIndexChanged += new System.EventHandler(this.listBoxView_SelectedIndexChanged);
             this.listBoxView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBoxView_KeyDown);
             // 
-            // btLogOut
+            // logout_btn
             // 
-            this.btLogOut.Location = new System.Drawing.Point(20, 27);
-            this.btLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btLogOut.Name = "btLogOut";
-            this.btLogOut.Size = new System.Drawing.Size(108, 36);
-            this.btLogOut.TabIndex = 4;
-            this.btLogOut.Text = "Cerrar Sesión";
-            this.btLogOut.UseVisualStyleBackColor = true;
-            this.btLogOut.Click += new System.EventHandler(this.botonHome_Click);
+            this.logout_btn.Location = new System.Drawing.Point(20, 27);
+            this.logout_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.logout_btn.Name = "logout_btn";
+            this.logout_btn.Size = new System.Drawing.Size(108, 36);
+            this.logout_btn.TabIndex = 4;
+            this.logout_btn.Text = "Cerrar Sesión";
+            this.logout_btn.UseVisualStyleBackColor = true;
+            this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
             // 
             // botonEliminar
             // 
@@ -125,7 +125,7 @@
             this.Controls.Add(this.button_add_task);
             this.Controls.Add(this.botonVaciar);
             this.Controls.Add(this.botonEliminar);
-            this.Controls.Add(this.btLogOut);
+            this.Controls.Add(this.logout_btn);
             this.Controls.Add(this.listBoxView);
             this.Controls.Add(this.subTitelList);
             this.Controls.Add(this.msg_welcome);
@@ -143,7 +143,7 @@
         private System.Windows.Forms.Label msg_welcome;
         private System.Windows.Forms.Label subTitelList;
         private System.Windows.Forms.ListBox listBoxView;
-        private System.Windows.Forms.Button btLogOut;
+        private System.Windows.Forms.Button logout_btn;
         private System.Windows.Forms.Button botonEliminar;
         private System.Windows.Forms.Button botonVaciar;
         private System.Windows.Forms.Button button_add_task;

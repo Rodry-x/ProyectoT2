@@ -37,6 +37,8 @@
             this.date_addTask = new System.Windows.Forms.Label();
             this.button_save = new System.Windows.Forms.Button();
             this.button_cancel = new System.Windows.Forms.Button();
+            this.msg_required1 = new System.Windows.Forms.Label();
+            this.msg_required2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // msg_addTask
@@ -124,12 +126,32 @@
             this.button_cancel.UseVisualStyleBackColor = true;
             this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
             // 
+            // msg_required1
+            // 
+            this.msg_required1.AutoSize = true;
+            this.msg_required1.Location = new System.Drawing.Point(88, 82);
+            this.msg_required1.Name = "msg_required1";
+            this.msg_required1.Size = new System.Drawing.Size(10, 16);
+            this.msg_required1.TabIndex = 9;
+            this.msg_required1.Text = ".";
+            // 
+            // msg_required2
+            // 
+            this.msg_required2.AutoSize = true;
+            this.msg_required2.Location = new System.Drawing.Point(131, 140);
+            this.msg_required2.Name = "msg_required2";
+            this.msg_required2.Size = new System.Drawing.Size(10, 16);
+            this.msg_required2.TabIndex = 10;
+            this.msg_required2.Text = ".";
+            // 
             // AddTaskForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(634, 509);
+            this.Controls.Add(this.msg_required2);
+            this.Controls.Add(this.msg_required1);
             this.Controls.Add(this.button_cancel);
             this.Controls.Add(this.button_save);
             this.Controls.Add(this.date_addTask);
@@ -158,5 +180,7 @@
         private System.Windows.Forms.Label date_addTask;
         private System.Windows.Forms.Button button_save;
         private System.Windows.Forms.Button button_cancel;
+        private System.Windows.Forms.Label msg_required1;
+        private System.Windows.Forms.Label msg_required2;
     }
 }
