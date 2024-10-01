@@ -18,23 +18,12 @@ namespace Models
         public DateTime Deadline { get; set; }
 
     }
-
-    public class  PutTaskBodyResponse
-    {
-        public int id { get; set; }
-        public string name { get; set; }
-        public string description { get; set; }
-        public DateTime deadline { get; set; }
-
-    }
-
-    public class PutTasksBodyRequest
+    public class PutTaskBodyRequest
     {
         public string name { get; set; }
         public string description { get; set; }
         public DateTime deadline { get; set; }
     }
-
     public class CreateTaskBodyRequest
     {
         public string name { get; set; }

@@ -68,7 +68,8 @@ namespace AppForms
 
         private void edit_TaskForm(object sender, EventArgs e)
         {
-            DetailsForm editTask = new DetailsForm();
+            TaskItem selectedTask = (TaskItem)listBoxView.SelectedItem;
+            DetailsForm editTask = new DetailsForm(selectedTask);
             editTask.Visible = true;
         }
     }

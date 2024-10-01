@@ -83,7 +83,6 @@ namespace Helpers
             {
                 string url = $"{_apiBaseUrl}/{endpoint}";
                 string jsonRequest = JsonConvert.SerializeObject(data);
-                Debug.WriteLine($"Sending POST request to {url} with data: {jsonRequest}");
                 StringContent content = new StringContent(jsonRequest, Encoding.UTF8, "application/json");
 
                 HttpResponseMessage response = await _client.PostAsync(url, content);
@@ -91,7 +90,6 @@ namespace Helpers
                 response.EnsureSuccessStatusCode();
 
                 string jsonResponse = await response.Content.ReadAsStringAsync();
-                Debug.WriteLine($"Response: {jsonResponse}");
                 TResponse responseData = JsonConvert.DeserializeObject<TResponse>(jsonResponse);
 
                 return responseData;
@@ -110,7 +108,7 @@ namespace Helpers
         /// <param name="endpoint">The request endpoint.</param>
         /// <param name="data">The request data.</param>
         /// <returns>The deserialized response.</returns>
-        public async Task<TResponse> PutAsync<TRequest, TResponse>(string endpoint, TRequest data)
+        public async Task<bool> PutAsync(string endpoint, object data)
         {
             try
             {
@@ -120,11 +118,7 @@ namespace Helpers
 
                 HttpResponseMessage response = await _client.PutAsync(url, content);
 
-                response.EnsureSuccessStatusCode();
-
-                string jsonResponse = await response.Content.ReadAsStringAsync();
-                TResponse responseData = JsonConvert.DeserializeObject<TResponse>(jsonResponse);
-                return responseData;
+                return response.IsSuccessStatusCode;
             }
             catch (Exception ex)
             {

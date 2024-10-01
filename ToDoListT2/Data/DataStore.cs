@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using Models;
 
 namespace Data
@@ -13,9 +12,9 @@ namespace Data
 
         public static void Clear()
         {
-            DataStore.Tasks.Clear();
-            DataStore.User = new User();
-            DataStore.Token = "";
+            Tasks.Clear();
+            User = new User();
+            Token = "";
         }
     }
 
