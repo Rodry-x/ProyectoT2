@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
+using Forms;
 
-namespace AppForms
+namespace Program
 {
     internal static class Program
     {

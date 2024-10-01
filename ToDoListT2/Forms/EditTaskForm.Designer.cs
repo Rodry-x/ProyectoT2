@@ -1,6 +1,6 @@
-﻿namespace AppForms
+﻿namespace Forms
 {
-    partial class DetailsForm
+    partial class EditTaskForm
     {
         /// <summary>
         /// Required designer variable.
@@ -128,7 +128,7 @@
             this.button_detele.Text = "Eliminar Tarea";
             this.button_detele.UseVisualStyleBackColor = true;
             // 
-            // DetailsForm
+            // EditTaskForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -144,7 +144,7 @@
             this.Controls.Add(this.btAccept);
             this.Controls.Add(this.txtEdit);
             this.Controls.Add(this.input_taskName);
-            this.Name = "DetailsForm";
+            this.Name = "EditTaskForm";
             this.Text = "editorForm";
             this.ResumeLayout(false);
             this.PerformLayout();

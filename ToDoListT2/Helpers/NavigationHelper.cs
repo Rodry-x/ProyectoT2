@@ -1,5 +1,5 @@
 ﻿using System.Windows.Forms;
-using AppForms;
+using Forms;
 
 namespace Helpers
 {

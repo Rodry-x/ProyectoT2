@@ -1,11 +1,10 @@
-﻿using System;
-using System.Windows.Forms;
-using AppForms;
+﻿using System.Windows.Forms;
+using System;
 using Data;
 using Helpers;
 using Models;
 
-namespace ToDoListT2
+namespace Forms
 {
     public partial class AddTaskForm : Form
     {
@@ -19,27 +18,23 @@ namespace ToDoListT2
             {
                 try
                 {
-                    using (FetchHelper fetchHelper = new FetchHelper())
+                    var body = new CreateTaskBodyRequest
                     {
-                        var body = new CreateTaskBodyRequest
-                        {
-                            name = input_taskName.Text,
-                            description = input_taskDescription.Text,
-                            deadline = input_taskDateTime.Value
+                        name = input_taskName.Text,
+                        description = input_taskDescription.Text,
+                        deadline = input_taskDateTime.Value
 
-                        };
-                        fetchHelper.SetAuthorizationToken(DataStore.Token);
-                        var response = await fetchHelper.PostAsync<CreateTaskBodyRequest, CreateTaskBodyResponse>("tasks", body);
-                        TaskItem task = new TaskItem
-                        {
-                            Id = response.id,
-                            Name = response.name,
-                            Description = response.description,
-                            Deadline = response.deadline
-                        };
-                        DataStore.Tasks.Add(task);
-                        this.Close();
-                    }
+                    };
+                    var response = await FetchHelper.PostAsync<CreateTaskBodyRequest, CreateTaskBodyResponse>("tasks", body);
+                    TaskItem task = new TaskItem
+                    {
+                        Id = response.id,
+                        Name = response.name,
+                        Description = response.description,
+                        Deadline = response.deadline
+                    };
+                    DataStore.Tasks.Add(task);
+                    Close();
                 }
                 catch (Exception ex)
                 {
@@ -47,7 +42,7 @@ namespace ToDoListT2
                     Console.WriteLine($"Error: {ex.Message}");
                 }
             }
-            else 
+            else
             {
                 msg_required1.Text = "Es Obligatorio";
                 msg_required2.Text = "Es Obligatorio";

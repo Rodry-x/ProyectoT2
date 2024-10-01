@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Windows.Forms;
-using Data;
 using Helpers;
 using Models;
 
-namespace AppForms
+namespace Forms
 {
     public partial class RegisterForm : Form
     {
@@ -23,21 +22,17 @@ namespace AppForms
         {
             try
             {
-                using (FetchHelper fetchHelper = new FetchHelper())
+                var body = new RegisterBodyRequest
                 {
-                    var body = new RegisterBodyRequest
-                    {
-                        name = name_input.Text,
-                        email = email_input.Text,
-                        password = password_input.Text
-                    };
-                    await fetchHelper.PostAsync<RegisterBodyRequest, RegisterBodyResponse>("users", body);
-                    NavigationHelper.NavigateTo(new LoginForm());
-                }
+                    name = name_input.Text,
+                    email = email_input.Text,
+                    password = password_input.Text
+                };
+                await FetchHelper.PostAsync<RegisterBodyRequest, RegisterBodyResponse>("users", body);
+                NavigationHelper.NavigateTo(new LoginForm());
             }
             catch (Exception ex)
             {
-                //
                 Debug.WriteLine($"Error: {ex.Message}");
             }
         }

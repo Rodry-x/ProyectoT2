@@ -1,7 +1,7 @@
 ﻿using System.Windows.Forms;
 using Helpers;
 
-namespace AppForms
+namespace Forms
 {
     public partial class ContainerForm : Form
     {

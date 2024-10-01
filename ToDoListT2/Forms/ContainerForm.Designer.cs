@@ -1,4 +1,4 @@
-﻿namespace AppForms
+﻿namespace Forms
 {
     partial class ContainerForm
     {
