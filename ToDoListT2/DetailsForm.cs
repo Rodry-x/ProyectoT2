@@ -1,6 +1,9 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Windows.Forms;
+using Data;
 using Helpers;
+using Models;
 
 namespace AppForms
 {
@@ -11,8 +14,14 @@ namespace AppForms
             InitializeComponent();
         }
 
+       private async void EditTask()
+        {
+            //
+        }
+
         private void btAccept_Click(object sender, EventArgs e)
         {
+            EditTask();
             NavigationHelper.NavigateTo(new HomeForm());
         }
 

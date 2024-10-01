@@ -45,42 +45,13 @@ namespace AppForms
             }
             catch (Exception ex)
             {
-                //
                 Console.WriteLine($"Error: {ex.Message}");
             }
         }
 
         private void listBoxView_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //if (listBoxView.SelectedIndex!=-1)
-                 //textEliminar.Text = listBoxView.Items[listBoxView.SelectedIndex].ToString;
-        }
 
-        private void botonEliminar_Click(object sender, EventArgs e)
-        {
-            int indice = listBoxView.SelectedIndex;
-
-            if (indice!=-1)
-            {
-                listBoxView.Items.RemoveAt(indice);
-            }
-        }
-
-        private void botonVaciar_Click(object sender, EventArgs e)
-        {
-            listBoxView.Items.Clear();
-        }
-        private void listBoxView_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Delete)
-            {
-                int indice = listBoxView.SelectedIndex;
-
-                if (indice != -1)
-                {
-                    listBoxView.Items.RemoveAt(indice);
-                }
-            }
         }
 
         private void logout_btn_Click(object sender, EventArgs e)
@@ -93,6 +64,12 @@ namespace AppForms
         {
             AddTaskForm addTask = new AddTaskForm();
             addTask.Visible = true;
+        }
+
+        private void edit_TaskForm(object sender, EventArgs e)
+        {
+            DetailsForm editTask = new DetailsForm();
+            editTask.Visible = true;
         }
     }
 }

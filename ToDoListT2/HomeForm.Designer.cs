@@ -32,15 +32,13 @@
             this.subTitelList = new System.Windows.Forms.Label();
             this.listBoxView = new System.Windows.Forms.ListBox();
             this.logout_btn = new System.Windows.Forms.Button();
-            this.botonEliminar = new System.Windows.Forms.Button();
-            this.botonVaciar = new System.Windows.Forms.Button();
             this.button_add_task = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // msg_welcome
             // 
             this.msg_welcome.AutoSize = true;
-            this.msg_welcome.BackColor = System.Drawing.Color.DarkCyan;
+            this.msg_welcome.BackColor = System.Drawing.Color.Transparent;
             this.msg_welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
             this.msg_welcome.ForeColor = System.Drawing.SystemColors.Control;
             this.msg_welcome.Location = new System.Drawing.Point(11, 74);
@@ -67,10 +65,10 @@
             this.listBoxView.Location = new System.Drawing.Point(20, 219);
             this.listBoxView.Margin = new System.Windows.Forms.Padding(3, 16, 3, 16);
             this.listBoxView.Name = "listBoxView";
-            this.listBoxView.Size = new System.Drawing.Size(540, 532);
+            this.listBoxView.Size = new System.Drawing.Size(540, 580);
             this.listBoxView.TabIndex = 3;
             this.listBoxView.SelectedIndexChanged += new System.EventHandler(this.listBoxView_SelectedIndexChanged);
-            this.listBoxView.KeyDown += new System.Windows.Forms.KeyEventHandler(this.listBoxView_KeyDown);
+            this.listBoxView.DoubleClick += new System.EventHandler(this.edit_TaskForm);
             // 
             // logout_btn
             // 
@@ -82,29 +80,6 @@
             this.logout_btn.Text = "Cerrar Sesión";
             this.logout_btn.UseVisualStyleBackColor = true;
             this.logout_btn.Click += new System.EventHandler(this.logout_btn_Click);
-            // 
-            // botonEliminar
-            // 
-            this.botonEliminar.BackColor = System.Drawing.Color.PaleTurquoise;
-            this.botonEliminar.Location = new System.Drawing.Point(379, 759);
-            this.botonEliminar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.botonEliminar.Name = "botonEliminar";
-            this.botonEliminar.Size = new System.Drawing.Size(181, 46);
-            this.botonEliminar.TabIndex = 6;
-            this.botonEliminar.Text = "Eliminar";
-            this.botonEliminar.UseVisualStyleBackColor = false;
-            this.botonEliminar.Click += new System.EventHandler(this.botonEliminar_Click);
-            // 
-            // botonVaciar
-            // 
-            this.botonVaciar.Location = new System.Drawing.Point(536, 219);
-            this.botonVaciar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.botonVaciar.Name = "botonVaciar";
-            this.botonVaciar.Size = new System.Drawing.Size(24, 23);
-            this.botonVaciar.TabIndex = 7;
-            this.botonVaciar.Text = "X";
-            this.botonVaciar.UseVisualStyleBackColor = true;
-            this.botonVaciar.Click += new System.EventHandler(this.botonVaciar_Click);
             // 
             // button_add_task
             // 
@@ -123,8 +98,6 @@
             this.BackColor = System.Drawing.Color.DarkCyan;
             this.ClientSize = new System.Drawing.Size(579, 825);
             this.Controls.Add(this.button_add_task);
-            this.Controls.Add(this.botonVaciar);
-            this.Controls.Add(this.botonEliminar);
             this.Controls.Add(this.logout_btn);
             this.Controls.Add(this.listBoxView);
             this.Controls.Add(this.subTitelList);
@@ -144,8 +117,6 @@
         private System.Windows.Forms.Label subTitelList;
         private System.Windows.Forms.ListBox listBoxView;
         private System.Windows.Forms.Button logout_btn;
-        private System.Windows.Forms.Button botonEliminar;
-        private System.Windows.Forms.Button botonVaciar;
         private System.Windows.Forms.Button button_add_task;
     }
 }
