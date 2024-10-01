@@ -5,11 +5,11 @@ namespace Helpers
 {
     public static class NavigationHelper
     {
-        public static ContainerForm MainForm { get; set; }
+        public static ContainerForm _containerForm;
 
         public static void NavigateTo(Form form)
         {
-            MainForm.ShowForm(form);
+            _containerForm.ShowForm(form);
         }
     }
 

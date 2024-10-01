@@ -8,7 +8,7 @@ namespace Forms
         public ContainerForm()
         {
             InitializeComponent();
-            NavigationHelper.MainForm = this;
+            NavigationHelper._containerForm = this;
             NavigationHelper.NavigateTo(new LoginForm());
         }
         public void ShowForm(Form form)

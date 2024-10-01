@@ -1,13 +1,60 @@
 ﻿using System;
+using System.ComponentModel;
 
 namespace Models
 {
-    public class TaskItem
+    public class TaskItem: INotifyPropertyChanged
     {
         public int Id { get; set; }
-        public string Name { get; set; }
-        public string Description { get; set; }
-        public DateTime Deadline { get; set; }
+        private string name;
+        private string description;
+        private DateTime deadline;
+
+        public string Name
+        {
+            get { return name; }
+            set
+            {
+                if (name != value)
+                {
+                    name = value;
+                    OnPropertyChanged("Name");
+                }
+            }
+        }
+
+        public string Description
+        {
+            get { return description; }
+            set
+            {
+                if (description != value)
+                {
+                    description = value;
+                    OnPropertyChanged("Description");
+                }
+            }
+        }
+
+        public DateTime Deadline
+        {
+            get { return deadline; }
+            set
+            {
+                if (deadline != value)
+                {
+                    deadline = value;
+                    OnPropertyChanged("Deadline");
+                }
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
     }
 
     public class GetTasksItem

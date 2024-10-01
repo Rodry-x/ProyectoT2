@@ -36,25 +36,25 @@
             this.label1 = new System.Windows.Forms.Label();
             this.buttonLogin = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            //
+            // 
             // email_input
-            //
+            // 
             this.email_input.Location = new System.Drawing.Point(125, 251);
             this.email_input.Margin = new System.Windows.Forms.Padding(2);
             this.email_input.Name = "email_input";
             this.email_input.Size = new System.Drawing.Size(185, 20);
             this.email_input.TabIndex = 0;
-            //
+            // 
             // password_input
-            //
+            // 
             this.password_input.Location = new System.Drawing.Point(125, 288);
             this.password_input.Margin = new System.Windows.Forms.Padding(2);
             this.password_input.Name = "password_input";
             this.password_input.Size = new System.Drawing.Size(185, 20);
             this.password_input.TabIndex = 1;
-            //
+            // 
             // textRegister
-            //
+            // 
             this.textRegister.AutoSize = true;
             this.textRegister.LinkColor = System.Drawing.Color.Black;
             this.textRegister.Location = new System.Drawing.Point(181, 388);
@@ -65,9 +65,9 @@
             this.textRegister.TabStop = true;
             this.textRegister.Text = "Registrarse";
             this.textRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.textRegister_LinkClicked);
-            //
+            // 
             // txtGmail
-            //
+            // 
             this.txtGmail.AutoSize = true;
             this.txtGmail.Location = new System.Drawing.Point(123, 236);
             this.txtGmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -75,9 +75,9 @@
             this.txtGmail.Size = new System.Drawing.Size(38, 13);
             this.txtGmail.TabIndex = 4;
             this.txtGmail.Text = "Correo";
-            //
+            // 
             // txtPassword
-            //
+            // 
             this.txtPassword.AutoSize = true;
             this.txtPassword.Location = new System.Drawing.Point(123, 272);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -85,9 +85,9 @@
             this.txtPassword.Size = new System.Drawing.Size(61, 13);
             this.txtPassword.TabIndex = 5;
             this.txtPassword.Text = "Contraseña";
-            //
+            // 
             // label1
-            //
+            // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(206, 367);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
@@ -95,9 +95,9 @@
             this.label1.Size = new System.Drawing.Size(15, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "O";
-            //
+            // 
             // buttonLogin
-            //
+            // 
             this.buttonLogin.Location = new System.Drawing.Point(164, 330);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLogin.Name = "buttonLogin";
@@ -106,9 +106,9 @@
             this.buttonLogin.Text = "Acceder";
             this.buttonLogin.UseVisualStyleBackColor = true;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
-            //
+            // 
             // LoginForm
-            //
+            // 
             this.AcceptButton = this.buttonLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;

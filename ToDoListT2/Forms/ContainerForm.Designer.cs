@@ -33,24 +33,25 @@
             // 
             // panelContainer
             // 
-            this.panelContainer.BackColor = System.Drawing.Color.SeaGreen;
+            this.panelContainer.BackColor = System.Drawing.Color.Transparent;
             this.panelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelContainer.Location = new System.Drawing.Point(0, 0);
+            this.panelContainer.Margin = new System.Windows.Forms.Padding(2);
             this.panelContainer.Name = "panelContainer";
-            this.panelContainer.Size = new System.Drawing.Size(579, 825);
+            this.panelContainer.Size = new System.Drawing.Size(434, 670);
             this.panelContainer.TabIndex = 0;
-            // 
+            //
             // ContainerForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkCyan;
-            this.ClientSize = new System.Drawing.Size(579, 825);
+            this.ClientSize = new System.Drawing.Size(434, 670);
             this.Controls.Add(this.panelContainer);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ContainerForm";
-            this.Text = "Contenedor";
+            this.Text = "ToDo App";
             this.ResumeLayout(false);
-
         }
 
         #endregion

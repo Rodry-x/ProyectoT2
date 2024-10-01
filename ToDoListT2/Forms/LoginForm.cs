@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Data;
 using Helpers;
@@ -14,7 +16,30 @@ namespace Forms
         {
             InitializeComponent();
         }
-        private async void login()
+
+        private async Task getTasks()
+        {
+            try
+            {
+                var response = await FetchHelper.GetAsync<List<GetTasksItem>>("tasks");
+                response.ForEach(task => {
+                    var taskItem = new TaskItem
+                    {
+                        Id = task.id,
+                        Name = task.name,
+                        Description = task.description,
+                        Deadline = task.Deadline
+                    };
+                    DataStore.Tasks.Add(taskItem);
+                });
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
+
+        private async Task login()
         {
             try
             {
@@ -32,7 +57,6 @@ namespace Forms
                 };
                 DataStore.User = user;
                 FetchHelper.SetAuthenticationHeader(response.token);
-                NavigationHelper.NavigateTo(new HomeForm());
             }
             catch (Exception ex)
             {
@@ -42,17 +66,14 @@ namespace Forms
 
         private async void buttonLogin_Click(object sender, EventArgs e)
         {
-            login();
+            await login();
+            await getTasks();
+            NavigationHelper.NavigateTo(new HomeForm());
         }
 
         private void textRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             NavigationHelper.NavigateTo(new RegisterForm());
-        }
-
-        private void onPressEnter(object sender, KeyEventArgs e)
-        {
-            login();
         }
     }
 }

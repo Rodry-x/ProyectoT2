@@ -9,10 +9,10 @@ namespace Forms
 {
     public partial class EditTaskForm: Form
     {
-        TaskItem task;
-        public EditTaskForm(TaskItem taskItem)
+        private readonly int taskIndex;
+        public EditTaskForm(int selecTaskItem)
         {
-            task = taskItem;
+            taskIndex = selecTaskItem;
             InitializeComponent();
         }
         private async void EditTask()
@@ -25,18 +25,13 @@ namespace Forms
                     description = input_taskDescription.Text,
                     deadline = input_taskDateTime.Value
                 };
-                var success = await FetchHelper.PutAsync($"tasks/{task.Id}", body);
+                var success = await FetchHelper.PutAsync($"tasks/{DataStore.Tasks[taskIndex].Id}", body);
                 if (success)
                 {
-                    var taskIndex = DataStore.Tasks.IndexOf(task);
                     Debug.WriteLine(taskIndex);
-                    DataStore.Tasks[taskIndex] = new TaskItem
-                    {
-                        Id = task.Id,
-                        Name = input_taskName.Text,
-                        Description = input_taskDescription.Text,
-                        Deadline = input_taskDateTime.Value
-                    };
+                    DataStore.Tasks[taskIndex].Name = input_taskName.Text;
+                    DataStore.Tasks[taskIndex].Description = input_taskDescription.Text;
+                    DataStore.Tasks[taskIndex].Deadline = input_taskDateTime.Value;
                     MessageBox.Show("Tarea actualizada");
                     Close();
                 }
