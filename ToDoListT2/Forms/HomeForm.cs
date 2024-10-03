@@ -4,6 +4,7 @@ using System.Windows.Forms;
 using Data;
 using Helpers;
 using Models;
+using ToDoListT2.Forms;
 
 namespace Forms
 {
@@ -39,6 +40,11 @@ namespace Forms
             DataStore.Clear();
             FetchHelper.ClearAuthenticationHeader();
             NavigationHelper.NavigateTo(new LoginForm());
+        }
+
+        private void buttonSettings_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.NavigateTo(new DetailsUserForm());
         }
     }
 }
