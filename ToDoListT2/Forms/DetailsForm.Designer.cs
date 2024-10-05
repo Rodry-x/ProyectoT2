@@ -63,6 +63,7 @@ namespace Forms
             // 
             // lblTaskDescription
             // 
+            this.lblTaskDescription.ForeColor = System.Drawing.Color.White;
             this.lblTaskDescription.Location = new System.Drawing.Point(32, 152);
             this.lblTaskDescription.Name = "lblTaskDescription";
             this.lblTaskDescription.Size = new System.Drawing.Size(387, 156);
@@ -71,6 +72,7 @@ namespace Forms
             // 
             // lblTaskDeadline
             // 
+            this.lblTaskDeadline.ForeColor = System.Drawing.Color.White;
             this.lblTaskDeadline.Location = new System.Drawing.Point(309, 407);
             this.lblTaskDeadline.Name = "lblTaskDeadline";
             this.lblTaskDeadline.Size = new System.Drawing.Size(87, 34);
@@ -101,14 +103,15 @@ namespace Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkCyan;
-            this.ClientSize = new System.Drawing.Size(457, 597);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.ClientSize = new System.Drawing.Size(450, 610);
             this.Controls.Add(this.btnEditTask);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.lblTaskDeadline);
             this.Controls.Add(this.lblTaskDescription);
             this.Controls.Add(this.lblTaskName);
             this.Controls.Add(this.backButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "DetailsForm";
             this.Text = "DetailsForm";
             this.Load += new System.EventHandler(this.DetailsForm_Load);
