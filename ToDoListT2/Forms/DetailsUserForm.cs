@@ -1,10 +1,8 @@
 ﻿using System.Windows.Forms;
 using Helpers;
-using Models;
-using Data;
-using Forms;
+using Stores;
 
-namespace ToDoListT2.Forms
+namespace Forms
 {
     public partial class DetailsUserForm : Form
     {
@@ -25,8 +23,8 @@ namespace ToDoListT2.Forms
 
         private void DetailsUserForm_Load(object sender, System.EventArgs e)
         {
-            lblEmail.Text = DataStore.User.Email;
-            lblUser.Text = DataStore.User.Name;
+            lblEmail.Text = UserStore.User.Email;
+            lblUser.Text = UserStore.User.Name;
         }
     }
 }

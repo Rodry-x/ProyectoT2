@@ -1,8 +1,8 @@
 ﻿using System.Windows.Forms;
 using System;
-using Data;
 using Helpers;
 using Models;
+using Stores;
 
 namespace Forms
 {
@@ -33,7 +33,7 @@ namespace Forms
                         Description = response.description,
                         Deadline = response.deadline
                     };
-                    DataStore.Tasks.Add(task);
+                    TasksStore.Tasks.Add(task);
                     Close();
                 }
                 catch (Exception ex)
@@ -51,7 +51,7 @@ namespace Forms
 
         private void AddTaskForm_Load(object sender, EventArgs e)
         {
-            msg_addTask.Text = $"Que quieres añadir hoy {DataStore.User.Name}?";
+            msg_addTask.Text = $"Que quieres añadir hoy {UserStore.User.Name}?";
         }
 
         private void button_save_Click(object sender, EventArgs e)

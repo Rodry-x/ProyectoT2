@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using Helpers;
 using Models;
+using Stores;
 
 namespace Forms
 {
@@ -20,21 +21,12 @@ namespace Forms
 
         private async void btRegister_Click(object sender, EventArgs e)
         {
-            try
-            {
-                var body = new RegisterBodyRequest
-                {
-                    name = name_input.Text,
-                    email = email_input.Text,
-                    password = password_input.Text
-                };
-                await FetchHelper.PostAsync<RegisterBodyRequest, RegisterBodyResponse>("users", body);
-                NavigationHelper.NavigateTo(new LoginForm());
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"Error: {ex.Message}");
-            }
+            await UserStore.register(
+                name_input.Text,
+                email_input.Text,
+                password_input.Text
+            );
+            NavigationHelper.NavigateTo(new HomeForm());
         }
 
         private void RegisterForm_Load(object sender, EventArgs e)

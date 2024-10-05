@@ -53,7 +53,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\DataStore.cs" />
     <Compile Include="Forms\AddTaskForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,12 +109,15 @@
     </Compile>
     <Compile Include="Helpers\FetchHelper.cs" />
     <Compile Include="Helpers\NavigationHelper.cs" />
+    <Compile Include="Helpers\UIHelper.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Register.cs" />
     <Compile Include="Models\Task.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Stores\TasksStore.cs" />
+    <Compile Include="Stores\UserStore.cs" />
     <EmbeddedResource Include="Forms\AddTaskForm.resx">
       <DependentUpon>AddTaskForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +170,13 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Components\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\close_icon.png" />
+    <Content Include="Assets\minimize_icon.png" />
+    <Content Include="Resources\close_icon.png" />
+    <Content Include="Resources\minimize_icon.png" />
+    <Content Include="Resources\minimize_icon1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

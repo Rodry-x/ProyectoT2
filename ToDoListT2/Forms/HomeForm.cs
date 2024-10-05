@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
-using Data;
 using Helpers;
-using Models;
-using ToDoListT2.Forms;
+using Stores;
 
 namespace Forms
 {
@@ -17,8 +14,8 @@ namespace Forms
 
         private void HomeForm_Load(object sender, EventArgs e)
         {
-            msg_welcome.Text = $"Bienvenido, {DataStore.User.Name}";
-            tasksList.DataSource = DataStore.Tasks;
+            msg_welcome.Text = $"Bienvenido, {UserStore.User.Name}";
+            tasksList.DataSource = TasksStore.Tasks;
             tasksList.DisplayMember = "Name";
             tasksList.ValueMember = "Id";
         }
@@ -37,7 +34,8 @@ namespace Forms
 
         private void ButtonLogout_Click(object sender, EventArgs e)
         {
-            DataStore.Clear();
+            TasksStore.Clear();
+            UserStore.Clear();
             FetchHelper.ClearAuthenticationHeader();
             NavigationHelper.NavigateTo(new LoginForm());
         }

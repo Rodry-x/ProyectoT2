@@ -2,8 +2,7 @@
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Helpers;
-using Data;
-using Models;
+using Stores;
 
 namespace Forms
 {
@@ -13,6 +12,7 @@ namespace Forms
         public DetailsForm(int selectedTaskIndex)
         {
             InitializeComponent();
+            UIHelper.LoadDefaultStyle(this);
             taskIndex = selectedTaskIndex;
         }
 
@@ -20,10 +20,10 @@ namespace Forms
         {
             try
             {
-                var success = await FetchHelper.DeleteAsync($"tasks/{DataStore.Tasks[taskIndex].Id}");
+                var success = await FetchHelper.DeleteAsync($"tasks/{TasksStore.Tasks[taskIndex].Id}");
                 if (success)
                 {
-                    DataStore.Tasks.RemoveAt(taskIndex);
+                    TasksStore.Tasks.RemoveAt(taskIndex);
                     MessageBox.Show("Tarea eliminada");
                     NavigationHelper.NavigateTo(new HomeForm());
                 }
@@ -40,9 +40,9 @@ namespace Forms
 
         private void DetailsForm_Load(object sender, EventArgs e)
         {
-            lblTaskName.DataBindings.Add("Text", DataStore.Tasks[taskIndex], "Name");
-            lblTaskDescription.DataBindings.Add("Text", DataStore.Tasks[taskIndex], "Description");
-            lblTaskDeadline.DataBindings.Add("Text", DataStore.Tasks[taskIndex], "Deadline");
+            lblTaskName.DataBindings.Add("Text", TasksStore.Tasks[taskIndex], "Name");
+            lblTaskDescription.DataBindings.Add("Text", TasksStore.Tasks[taskIndex], "Description");
+            lblTaskDeadline.DataBindings.Add("Text", TasksStore.Tasks[taskIndex], "Deadline");
         }
 
         private void btnEditTask_Click(object sender, EventArgs e)

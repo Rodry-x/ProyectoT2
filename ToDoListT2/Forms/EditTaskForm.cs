@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Windows.Forms;
 using Helpers;
 using Models;
-using Data;
+using Stores;
 
 namespace Forms
 {
@@ -25,13 +25,13 @@ namespace Forms
                     description = input_taskDescription.Text,
                     deadline = input_taskDateTime.Value
                 };
-                var success = await FetchHelper.PutAsync($"tasks/{DataStore.Tasks[taskIndex].Id}", body);
+                var success = await FetchHelper.PutAsync($"tasks/{TasksStore.Tasks[taskIndex].Id}", body);
                 if (success)
                 {
                     Debug.WriteLine(taskIndex);
-                    DataStore.Tasks[taskIndex].Name = input_taskName.Text;
-                    DataStore.Tasks[taskIndex].Description = input_taskDescription.Text;
-                    DataStore.Tasks[taskIndex].Deadline = input_taskDateTime.Value;
+                    TasksStore.Tasks[taskIndex].Name = input_taskName.Text;
+                    TasksStore.Tasks[taskIndex].Description = input_taskDescription.Text;
+                    TasksStore.Tasks[taskIndex].Deadline = input_taskDateTime.Value;
                     MessageBox.Show("Tarea actualizada");
                     Close();
                 }

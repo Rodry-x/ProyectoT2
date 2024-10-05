@@ -1,19 +1,10 @@
-﻿using Data;
-using Forms;
+﻿using System;
+using System.Windows.Forms;
 using Helpers;
 using Models;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+using Stores;
 
-namespace ToDoListT2.Forms
+namespace Forms
 {
     public partial class EditUserForm : Form
     {
@@ -32,12 +23,12 @@ namespace ToDoListT2.Forms
                     email = input_userEmail.Text,
                     password = input_userPassword.Text
                 };
-                var success = await FetchHelper.PutAsync($"users/{DataStore.User.Id}", body);
+                var success = await FetchHelper.PutAsync($"users/{UserStore.User.Id}", body);
                 if (success)
                 {
-                    DataStore.User.Name = input_userName.Text;
-                    DataStore.User.Email = input_userEmail.Text;
-                    DataStore.User.Password = input_userPassword.Text;
+                    UserStore.User.Name = input_userName.Text;
+                    UserStore.User.Email = input_userEmail.Text;
+                    UserStore.User.Password = input_userPassword.Text;
                     MessageBox.Show("Usuario actualizado");
                 }
                 else
