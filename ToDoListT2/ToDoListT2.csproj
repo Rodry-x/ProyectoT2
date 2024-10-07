@@ -115,7 +115,6 @@
     </Compile>
     <Compile Include="Helpers\FetchHelper.cs" />
     <Compile Include="Helpers\NavigationHelper.cs" />
-    <Compile Include="Helpers\UIHelper.cs" />
     <Compile Include="Models\Login.cs" />
     <Compile Include="Models\Register.cs" />
     <Compile Include="Models\Task.cs" />

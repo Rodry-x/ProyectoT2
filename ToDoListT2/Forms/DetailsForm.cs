@@ -12,7 +12,6 @@ namespace Forms
         public DetailsForm(int selectedTaskIndex)
         {
             InitializeComponent();
-            UIHelper.LoadDefaultStyle(this);
             taskIndex = selectedTaskIndex;
         }
 

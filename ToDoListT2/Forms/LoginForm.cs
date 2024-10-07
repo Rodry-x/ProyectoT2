@@ -11,7 +11,6 @@ namespace Forms
         public LoginForm()
         {
             InitializeComponent();
-            UIHelper.LoadDefaultStyle(this);
         }
 
         private async void buttonLogin_Click(object sender, EventArgs e)
