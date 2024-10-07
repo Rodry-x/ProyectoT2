@@ -185,7 +185,6 @@
     <Content Include="Assets\minimize_icon.png" />
     <Content Include="Resources\close_icon.png" />
     <Content Include="Resources\minimize_icon.png" />
-    <Content Include="Resources\minimize_icon1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

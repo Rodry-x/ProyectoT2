@@ -24,19 +24,30 @@ namespace Forms
             await UserStore.register(
                 name_input.Text,
                 email_input.Text,
-                password_input.Text
+                // txtPassword.Text
+                "asd"
             );
             NavigationHelper.NavigateTo(new HomeForm());
-        }
-
-        private void RegisterForm_Load(object sender, EventArgs e)
-        {
-
         }
 
         private void boxUser_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void panelName_Paint(object sender, PaintEventArgs e)
+        {
+            txtUser.Focus();
+        }
+
+        private void panelEmail_Paint(object sender, PaintEventArgs e)
+        {
+            txtGmail.Focus();
+        }
+
+        private void panelPassword_Paint(object sender, PaintEventArgs e)
+        {
+            // txtPassword.Focus();
         }
     }
 }
