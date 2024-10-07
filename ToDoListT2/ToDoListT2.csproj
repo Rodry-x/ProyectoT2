@@ -59,6 +59,12 @@
     <Compile Include="Forms\AddTaskForm.Designer.cs">
       <DependentUpon>AddTaskForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FloatingContainerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FloatingContainerForm.Designer.cs">
+      <DependentUpon>FloatingContainerForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ContainerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     <Compile Include="Stores\UserStore.cs" />
     <EmbeddedResource Include="Forms\AddTaskForm.resx">
       <DependentUpon>AddTaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FloatingContainerForm.resx">
+      <DependentUpon>FloatingContainerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ContainerForm.resx">
       <DependentUpon>ContainerForm.cs</DependentUpon>

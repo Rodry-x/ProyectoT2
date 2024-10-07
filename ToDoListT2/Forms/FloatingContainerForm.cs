@@ -2,27 +2,28 @@
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Helpers;
+using System.Diagnostics;
 
 namespace Forms
 {
-    public partial class ContainerForm : Form
+    public partial class FloatingContainerForm : Form
     {
-
-        public ContainerForm()
+        public FloatingContainerForm(Form form)
         {
             InitializeComponent();
-            NavigationHelper._containerForm = this;
-            NavigationHelper.NavigateTo(new LoginForm());
+            ShowForm(form);
         }
-        public void ShowForm(Form form)
+        private void ShowForm(Form form)
         {
+            Debug.WriteLine(form);
             form.TopLevel = false;
             form.Dock = DockStyle.Fill;
 
-            panelContainer.Controls.Clear();
-            panelContainer.Controls.Add(form);
+            panelContent.Controls.Clear();
+            panelContent.Controls.Add(form);
             form.Show();
         }
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private static extern void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -36,7 +37,7 @@ namespace Forms
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            Close();
         }
 
         private void btnMinimize_Click(object sender, EventArgs e)

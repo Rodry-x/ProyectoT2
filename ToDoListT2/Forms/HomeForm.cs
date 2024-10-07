@@ -28,8 +28,7 @@ namespace Forms
 
         private void ButtonAdd_Click(object sender, EventArgs e)
         {
-            AddTaskForm addTaskForm = new AddTaskForm();
-            addTaskForm.Visible = true;
+            NavigationHelper.NavigateToFloating(new AddTaskForm());
         }
 
         private void ButtonLogout_Click(object sender, EventArgs e)

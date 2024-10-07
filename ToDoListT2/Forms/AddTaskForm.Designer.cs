@@ -46,7 +46,7 @@
             this.msg_addTask.AutoSize = true;
             this.msg_addTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
             this.msg_addTask.ForeColor = System.Drawing.SystemColors.Control;
-            this.msg_addTask.Location = new System.Drawing.Point(12, 9);
+            this.msg_addTask.Location = new System.Drawing.Point(40, 21);
             this.msg_addTask.Name = "msg_addTask";
             this.msg_addTask.Size = new System.Drawing.Size(282, 48);
             this.msg_addTask.TabIndex = 0;
@@ -57,7 +57,7 @@
             this.title_addTask.AutoSize = true;
             this.title_addTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.title_addTask.ForeColor = System.Drawing.SystemColors.Control;
-            this.title_addTask.Location = new System.Drawing.Point(38, 80);
+            this.title_addTask.Location = new System.Drawing.Point(43, 88);
             this.title_addTask.Name = "title_addTask";
             this.title_addTask.Size = new System.Drawing.Size(44, 18);
             this.title_addTask.TabIndex = 1;
@@ -65,7 +65,7 @@
             // 
             // input_taskName
             // 
-            this.input_taskName.Location = new System.Drawing.Point(41, 101);
+            this.input_taskName.Location = new System.Drawing.Point(43, 115);
             this.input_taskName.Name = "input_taskName";
             this.input_taskName.Size = new System.Drawing.Size(471, 22);
             this.input_taskName.TabIndex = 2;
@@ -75,7 +75,7 @@
             this.description_addTask.AutoSize = true;
             this.description_addTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.description_addTask.ForeColor = System.Drawing.SystemColors.Control;
-            this.description_addTask.Location = new System.Drawing.Point(38, 138);
+            this.description_addTask.Location = new System.Drawing.Point(42, 157);
             this.description_addTask.Name = "description_addTask";
             this.description_addTask.Size = new System.Drawing.Size(87, 18);
             this.description_addTask.TabIndex = 3;
@@ -83,14 +83,14 @@
             // 
             // input_taskDescription
             // 
-            this.input_taskDescription.Location = new System.Drawing.Point(42, 162);
+            this.input_taskDescription.Location = new System.Drawing.Point(43, 183);
             this.input_taskDescription.Name = "input_taskDescription";
             this.input_taskDescription.Size = new System.Drawing.Size(469, 22);
             this.input_taskDescription.TabIndex = 4;
             // 
             // input_taskDateTime
             // 
-            this.input_taskDateTime.Location = new System.Drawing.Point(42, 231);
+            this.input_taskDateTime.Location = new System.Drawing.Point(42, 254);
             this.input_taskDateTime.Name = "input_taskDateTime";
             this.input_taskDateTime.Size = new System.Drawing.Size(175, 22);
             this.input_taskDateTime.TabIndex = 5;
@@ -100,7 +100,7 @@
             this.date_addTask.AutoSize = true;
             this.date_addTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
             this.date_addTask.ForeColor = System.Drawing.SystemColors.Control;
-            this.date_addTask.Location = new System.Drawing.Point(45, 213);
+            this.date_addTask.Location = new System.Drawing.Point(45, 224);
             this.date_addTask.Name = "date_addTask";
             this.date_addTask.Size = new System.Drawing.Size(49, 18);
             this.date_addTask.TabIndex = 6;
@@ -108,7 +108,7 @@
             // 
             // button_save
             // 
-            this.button_save.Location = new System.Drawing.Point(46, 435);
+            this.button_save.Location = new System.Drawing.Point(42, 380);
             this.button_save.Name = "button_save";
             this.button_save.Size = new System.Drawing.Size(147, 50);
             this.button_save.TabIndex = 7;
@@ -118,7 +118,7 @@
             // 
             // button_cancel
             // 
-            this.button_cancel.Location = new System.Drawing.Point(433, 435);
+            this.button_cancel.Location = new System.Drawing.Point(433, 381);
             this.button_cancel.Name = "button_cancel";
             this.button_cancel.Size = new System.Drawing.Size(157, 49);
             this.button_cancel.TabIndex = 8;
@@ -148,8 +148,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkCyan;
-            this.ClientSize = new System.Drawing.Size(634, 509);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
+            this.ClientSize = new System.Drawing.Size(914, 502);
             this.Controls.Add(this.msg_required2);
             this.Controls.Add(this.msg_required1);
             this.Controls.Add(this.button_cancel);
@@ -161,6 +161,7 @@
             this.Controls.Add(this.input_taskName);
             this.Controls.Add(this.title_addTask);
             this.Controls.Add(this.msg_addTask);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AddTaskForm";
             this.Text = "AddTaskForm";
             this.Load += new System.EventHandler(this.AddTaskForm_Load);

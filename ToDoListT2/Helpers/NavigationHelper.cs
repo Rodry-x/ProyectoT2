@@ -11,6 +11,10 @@ namespace Helpers
         {
             _containerForm.ShowForm(form);
         }
-    }
 
+        public static void NavigateToFloating(Form form)
+        {
+            new FloatingContainerForm(form).Show();
+        }
+    }
 }
