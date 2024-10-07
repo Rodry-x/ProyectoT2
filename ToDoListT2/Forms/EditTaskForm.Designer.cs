@@ -42,16 +42,17 @@
             // 
             // input_taskName
             // 
-            this.input_taskName.Location = new System.Drawing.Point(59, 116);
+            this.input_taskName.Location = new System.Drawing.Point(58, 132);
             this.input_taskName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.input_taskName.Name = "input_taskName";
-            this.input_taskName.Size = new System.Drawing.Size(415, 22);
+            this.input_taskName.Size = new System.Drawing.Size(765, 22);
             this.input_taskName.TabIndex = 0;
             // 
             // txtEdit
             // 
             this.txtEdit.AutoSize = true;
-            this.txtEdit.Location = new System.Drawing.Point(55, 97);
+            this.txtEdit.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtEdit.Location = new System.Drawing.Point(56, 109);
             this.txtEdit.Name = "txtEdit";
             this.txtEdit.Size = new System.Drawing.Size(40, 16);
             this.txtEdit.TabIndex = 1;
@@ -59,7 +60,7 @@
             // 
             // btAccept
             // 
-            this.btAccept.Location = new System.Drawing.Point(445, 391);
+            this.btAccept.Location = new System.Drawing.Point(597, 414);
             this.btAccept.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btAccept.Name = "btAccept";
             this.btAccept.Size = new System.Drawing.Size(89, 39);
@@ -70,7 +71,7 @@
             // 
             // btCancel
             // 
-            this.btCancel.Location = new System.Drawing.Point(565, 391);
+            this.btCancel.Location = new System.Drawing.Point(782, 414);
             this.btCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(91, 39);
@@ -93,7 +94,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(55, 159);
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(55, 172);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 16);
             this.label1.TabIndex = 5;
@@ -101,16 +103,17 @@
             // 
             // input_taskDescription
             // 
-            this.input_taskDescription.Location = new System.Drawing.Point(59, 178);
+            this.input_taskDescription.Location = new System.Drawing.Point(58, 199);
             this.input_taskDescription.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.input_taskDescription.Name = "input_taskDescription";
-            this.input_taskDescription.Size = new System.Drawing.Size(409, 22);
+            this.input_taskDescription.Size = new System.Drawing.Size(765, 22);
             this.input_taskDescription.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(55, 226);
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(56, 251);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 16);
             this.label2.TabIndex = 8;
@@ -118,7 +121,7 @@
             // 
             // button_detele
             // 
-            this.button_detele.Location = new System.Drawing.Point(59, 391);
+            this.button_detele.Location = new System.Drawing.Point(58, 414);
             this.button_detele.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button_detele.Name = "button_detele";
             this.button_detele.Size = new System.Drawing.Size(112, 39);
@@ -128,7 +131,7 @@
             // 
             // input_taskDateTime
             // 
-            this.input_taskDateTime.Location = new System.Drawing.Point(59, 246);
+            this.input_taskDateTime.Location = new System.Drawing.Point(58, 279);
             this.input_taskDateTime.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.input_taskDateTime.Name = "input_taskDateTime";
             this.input_taskDateTime.Size = new System.Drawing.Size(200, 22);
@@ -139,7 +142,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(679, 457);
+            this.ClientSize = new System.Drawing.Size(914, 502);
             this.Controls.Add(this.button_detele);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.input_taskDateTime);

@@ -36,16 +36,14 @@
             this.input_userEmail = new System.Windows.Forms.TextBox();
             this.input_userPassword = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // buttonSave
             // 
-            this.buttonSave.Location = new System.Drawing.Point(140, 537);
+            this.buttonSave.Location = new System.Drawing.Point(75, 406);
             this.buttonSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSave.Name = "buttonSave";
-            this.buttonSave.Size = new System.Drawing.Size(93, 39);
+            this.buttonSave.Size = new System.Drawing.Size(122, 57);
             this.buttonSave.TabIndex = 0;
             this.buttonSave.Text = "Guardar";
             this.buttonSave.UseVisualStyleBackColor = true;
@@ -53,10 +51,10 @@
             // 
             // buttonCancel
             // 
-            this.buttonCancel.Location = new System.Drawing.Point(340, 537);
+            this.buttonCancel.Location = new System.Drawing.Point(767, 406);
             this.buttonCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonCancel.Name = "buttonCancel";
-            this.buttonCancel.Size = new System.Drawing.Size(93, 39);
+            this.buttonCancel.Size = new System.Drawing.Size(113, 57);
             this.buttonCancel.TabIndex = 1;
             this.buttonCancel.Text = "Cancelar";
             this.buttonCancel.UseVisualStyleBackColor = true;
@@ -66,7 +64,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label1.Location = new System.Drawing.Point(123, 212);
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(104, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 26);
             this.label1.TabIndex = 2;
@@ -76,7 +75,8 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label2.Location = new System.Drawing.Point(123, 302);
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(104, 163);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(74, 26);
             this.label2.TabIndex = 3;
@@ -84,54 +84,45 @@
             // 
             // input_userName
             // 
-            this.input_userName.Location = new System.Drawing.Point(128, 242);
+            this.input_userName.Location = new System.Drawing.Point(109, 110);
             this.input_userName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.input_userName.Name = "input_userName";
-            this.input_userName.Size = new System.Drawing.Size(337, 22);
+            this.input_userName.Size = new System.Drawing.Size(686, 22);
             this.input_userName.TabIndex = 4;
             // 
             // input_userEmail
             // 
-            this.input_userEmail.Location = new System.Drawing.Point(128, 330);
+            this.input_userEmail.Location = new System.Drawing.Point(109, 201);
             this.input_userEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.input_userEmail.Name = "input_userEmail";
-            this.input_userEmail.Size = new System.Drawing.Size(337, 22);
+            this.input_userEmail.Size = new System.Drawing.Size(686, 22);
             this.input_userEmail.TabIndex = 5;
             // 
             // input_userPassword
             // 
-            this.input_userPassword.Location = new System.Drawing.Point(128, 422);
+            this.input_userPassword.Location = new System.Drawing.Point(109, 291);
             this.input_userPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.input_userPassword.Name = "input_userPassword";
-            this.input_userPassword.Size = new System.Drawing.Size(337, 22);
+            this.input_userPassword.Size = new System.Drawing.Size(687, 22);
             this.input_userPassword.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.label3.Location = new System.Drawing.Point(123, 393);
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(104, 248);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(130, 26);
             this.label3.TabIndex = 7;
             this.label3.Text = "Contraseña:";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::ToDoListT2.Properties.Resources.minimize_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(393, 106);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 8;
-            this.pictureBox1.TabStop = false;
             // 
             // EditUserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(600, 751);
-            this.Controls.Add(this.pictureBox1);
+            this.ClientSize = new System.Drawing.Size(914, 502);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.input_userPassword);
             this.Controls.Add(this.input_userEmail);
@@ -144,7 +135,6 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "EditUserForm";
             this.Text = "EditUserForm";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -160,6 +150,5 @@
         private System.Windows.Forms.TextBox input_userEmail;
         private System.Windows.Forms.TextBox input_userPassword;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

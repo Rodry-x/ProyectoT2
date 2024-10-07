@@ -42,10 +42,9 @@
             this.msg_welcome.BackColor = System.Drawing.Color.Transparent;
             this.msg_welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
             this.msg_welcome.ForeColor = System.Drawing.SystemColors.Control;
-            this.msg_welcome.Location = new System.Drawing.Point(8, 60);
-            this.msg_welcome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.msg_welcome.Location = new System.Drawing.Point(11, 74);
             this.msg_welcome.Name = "msg_welcome";
-            this.msg_welcome.Size = new System.Drawing.Size(276, 46);
+            this.msg_welcome.Size = new System.Drawing.Size(346, 58);
             this.msg_welcome.TabIndex = 0;
             this.msg_welcome.Text = "msg_welcome";
             // 
@@ -54,29 +53,29 @@
             this.subTitelList.AutoSize = true;
             this.subTitelList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.subTitelList.ForeColor = System.Drawing.SystemColors.Control;
-            this.subTitelList.Location = new System.Drawing.Point(11, 116);
-            this.subTitelList.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.subTitelList.Location = new System.Drawing.Point(15, 143);
             this.subTitelList.Name = "subTitelList";
-            this.subTitelList.Size = new System.Drawing.Size(157, 20);
+            this.subTitelList.Size = new System.Drawing.Size(194, 25);
             this.subTitelList.TabIndex = 2;
             this.subTitelList.Text = "Quieres anotar algo?";
             // 
             // tasksList
             // 
             this.tasksList.FormattingEnabled = true;
-            this.tasksList.Location = new System.Drawing.Point(15, 197);
-            this.tasksList.Margin = new System.Windows.Forms.Padding(2, 13, 2, 13);
+            this.tasksList.ItemHeight = 16;
+            this.tasksList.Location = new System.Drawing.Point(20, 242);
+            this.tasksList.Margin = new System.Windows.Forms.Padding(3, 16, 3, 16);
             this.tasksList.Name = "tasksList";
-            this.tasksList.Size = new System.Drawing.Size(424, 394);
+            this.tasksList.Size = new System.Drawing.Size(564, 516);
             this.tasksList.TabIndex = 3;
             this.tasksList.DoubleClick += new System.EventHandler(this.List_DoubleClick);
             // 
             // logout_btn
             // 
-            this.logout_btn.Location = new System.Drawing.Point(15, 22);
-            this.logout_btn.Margin = new System.Windows.Forms.Padding(2);
+            this.logout_btn.Location = new System.Drawing.Point(20, 27);
+            this.logout_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.logout_btn.Name = "logout_btn";
-            this.logout_btn.Size = new System.Drawing.Size(81, 29);
+            this.logout_btn.Size = new System.Drawing.Size(108, 36);
             this.logout_btn.TabIndex = 4;
             this.logout_btn.Text = "Cerrar Sesión";
             this.logout_btn.UseVisualStyleBackColor = true;
@@ -84,10 +83,10 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(349, 149);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonAdd.Location = new System.Drawing.Point(465, 183);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(90, 33);
+            this.buttonAdd.Size = new System.Drawing.Size(120, 41);
             this.buttonAdd.TabIndex = 10;
             this.buttonAdd.Text = "Añadir";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -95,10 +94,10 @@
             // 
             // buttonSettings
             // 
-            this.buttonSettings.Location = new System.Drawing.Point(349, 22);
-            this.buttonSettings.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonSettings.Location = new System.Drawing.Point(465, 27);
+            this.buttonSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSettings.Name = "buttonSettings";
-            this.buttonSettings.Size = new System.Drawing.Size(90, 29);
+            this.buttonSettings.Size = new System.Drawing.Size(120, 36);
             this.buttonSettings.TabIndex = 11;
             this.buttonSettings.Text = "Configuración";
             this.buttonSettings.UseVisualStyleBackColor = true;
@@ -106,10 +105,10 @@
             // 
             // HomeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(450, 610);
+            this.ClientSize = new System.Drawing.Size(600, 800);
             this.Controls.Add(this.buttonSettings);
             this.Controls.Add(this.buttonAdd);
             this.Controls.Add(this.logout_btn);
@@ -117,12 +116,13 @@
             this.Controls.Add(this.subTitelList);
             this.Controls.Add(this.msg_welcome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "HomeForm";
             this.Text = "Lista";
             this.Load += new System.EventHandler(this.HomeForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

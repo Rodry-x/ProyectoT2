@@ -18,7 +18,7 @@ namespace Forms
 
         private void buttonEdit_Click(object sender, System.EventArgs e)
         {
-            NavigationHelper.NavigateTo(new EditUserForm());
+            NavigationHelper.NavigateToFloating(new EditUserForm());
         }
 
         private void DetailsUserForm_Load(object sender, System.EventArgs e)

@@ -47,8 +47,7 @@ namespace Forms
 
         private void btnEditTask_Click(object sender, EventArgs e)
         {
-            var editTaskForm = new EditTaskForm(taskIndex);
-            editTaskForm.Visible = true;
+            NavigationHelper.NavigateToFloating(new EditTaskForm(taskIndex));
         }
 
         private void backButton_Click(object sender, EventArgs e)
