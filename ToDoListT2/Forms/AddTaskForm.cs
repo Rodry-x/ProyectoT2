@@ -34,7 +34,7 @@ namespace Forms
                         Deadline = response.deadline
                     };
                     TasksStore.Tasks.Add(task);
-                    Close();
+                    NavigationHelper.CloseFloating();
                 }
                 catch (Exception ex)
                 {
