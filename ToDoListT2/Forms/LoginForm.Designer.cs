@@ -40,84 +40,87 @@
             this.panelPassword.SuspendLayout();
             this.panelEmail.SuspendLayout();
             this.SuspendLayout();
-            //
+            // 
             // buttonLogin
-            //
+            // 
             this.buttonLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonLogin.FlatAppearance.BorderSize = 0;
-            this.buttonLogin.Location = new System.Drawing.Point(164, 347);
+            this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonLogin.Location = new System.Drawing.Point(157, 346);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(100, 25);
+            this.buttonLogin.Size = new System.Drawing.Size(118, 33);
             this.buttonLogin.TabIndex = 6;
             this.buttonLogin.Text = "Acceder";
             this.buttonLogin.UseVisualStyleBackColor = true;
             this.buttonLogin.Click += new System.EventHandler(this.buttonLogin_Click);
-            //
+            // 
             // textRegister
-            //
+            // 
             this.textRegister.AutoSize = true;
+            this.textRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textRegister.ForeColor = System.Drawing.Color.White;
             this.textRegister.LinkColor = System.Drawing.Color.White;
-            this.textRegister.Location = new System.Drawing.Point(185, 424);
+            this.textRegister.Location = new System.Drawing.Point(175, 424);
             this.textRegister.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.textRegister.Name = "textRegister";
-            this.textRegister.Size = new System.Drawing.Size(60, 13);
+            this.textRegister.Size = new System.Drawing.Size(81, 17);
             this.textRegister.TabIndex = 8;
             this.textRegister.TabStop = true;
             this.textRegister.Text = "Registrarse";
             this.textRegister.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.textRegister_LinkClicked);
-            //
+            // 
             // lblEmail
-            //
+            // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.White;
-            this.lblEmail.Location = new System.Drawing.Point(73, 202);
+            this.lblEmail.Location = new System.Drawing.Point(70, 205);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(63, 20);
+            this.lblEmail.Size = new System.Drawing.Size(57, 17);
             this.lblEmail.TabIndex = 0;
             this.lblEmail.Text = "Correo";
-            //
+            // 
             // lblPassword
-            //
+            // 
             this.lblPassword.AutoSize = true;
-            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.Color.White;
-            this.lblPassword.Location = new System.Drawing.Point(73, 274);
+            this.lblPassword.Location = new System.Drawing.Point(70, 277);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPassword.Name = "lblPassword";
-            this.lblPassword.Size = new System.Drawing.Size(102, 20);
+            this.lblPassword.Size = new System.Drawing.Size(91, 17);
             this.lblPassword.TabIndex = 3;
             this.lblPassword.Text = "Contraseña";
             this.lblPassword.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            //
+            // 
             // label1
-            //
+            // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(207, 393);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(15, 13);
+            this.label1.Size = new System.Drawing.Size(19, 17);
             this.label1.TabIndex = 7;
             this.label1.Text = "O";
-            //
+            // 
             // txtPassword
-            //
+            // 
             this.txtPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPassword.Location = new System.Drawing.Point(10, 5);
+            this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPassword.Location = new System.Drawing.Point(10, 7);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(0);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(280, 19);
+            this.txtPassword.Size = new System.Drawing.Size(280, 16);
             this.txtPassword.TabIndex = 5;
             this.txtPassword.UseSystemPasswordChar = true;
-            //
+            // 
             // panelPassword
-            //
+            // 
             this.panelPassword.BackColor = System.Drawing.Color.White;
             this.panelPassword.Controls.Add(this.txtPassword);
             this.panelPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -126,19 +129,19 @@
             this.panelPassword.Size = new System.Drawing.Size(300, 30);
             this.panelPassword.TabIndex = 4;
             this.panelPassword.Click += new System.EventHandler(this.panelPassword_Click);
-            //
+            // 
             // txtEmail
-            //
+            // 
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEmail.Location = new System.Drawing.Point(10, 5);
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmail.Location = new System.Drawing.Point(10, 7);
             this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(280, 19);
+            this.txtEmail.Size = new System.Drawing.Size(280, 16);
             this.txtEmail.TabIndex = 2;
-            //
+            // 
             // panelEmail
-            //
+            // 
             this.panelEmail.BackColor = System.Drawing.Color.White;
             this.panelEmail.Controls.Add(this.txtEmail);
             this.panelEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -147,9 +150,9 @@
             this.panelEmail.Size = new System.Drawing.Size(300, 30);
             this.panelEmail.TabIndex = 1;
             this.panelEmail.Click += new System.EventHandler(this.panelEmail_Click);
-            //
+            // 
             // LoginForm
-            //
+            // 
             this.AcceptButton = this.buttonLogin;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -172,6 +175,7 @@
             this.panelEmail.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         private System.Windows.Forms.Panel panelEmail;
