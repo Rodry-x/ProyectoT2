@@ -22,17 +22,11 @@ namespace Forms
         private async void btRegister_Click(object sender, EventArgs e)
         {
             await UserStore.register(
-                name_input.Text,
-                email_input.Text,
-                // txtPassword.Text
-                "asd"
+                txtUser.Text,
+                txtEmail.Text,
+                txtPassword.Text
             );
             NavigationHelper.NavigateTo(new HomeForm());
-        }
-
-        private void boxUser_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void panelName_Paint(object sender, PaintEventArgs e)
@@ -42,12 +36,12 @@ namespace Forms
 
         private void panelEmail_Paint(object sender, PaintEventArgs e)
         {
-            txtGmail.Focus();
+            txtEmail.Focus();
         }
 
         private void panelPassword_Paint(object sender, PaintEventArgs e)
         {
-            // txtPassword.Focus();
+            txtPassword.Focus();
         }
     }
 }

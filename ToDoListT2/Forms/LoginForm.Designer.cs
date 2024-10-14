@@ -37,6 +37,7 @@
             this.panelPassword = new System.Windows.Forms.Panel();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.panelEmail = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.panelPassword.SuspendLayout();
             this.panelEmail.SuspendLayout();
             this.SuspendLayout();
@@ -46,10 +47,10 @@
             this.buttonLogin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonLogin.FlatAppearance.BorderSize = 0;
             this.buttonLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogin.Location = new System.Drawing.Point(157, 346);
+            this.buttonLogin.Location = new System.Drawing.Point(175, 373);
             this.buttonLogin.Margin = new System.Windows.Forms.Padding(2);
             this.buttonLogin.Name = "buttonLogin";
-            this.buttonLogin.Size = new System.Drawing.Size(118, 33);
+            this.buttonLogin.Size = new System.Drawing.Size(100, 25);
             this.buttonLogin.TabIndex = 6;
             this.buttonLogin.Text = "Acceder";
             this.buttonLogin.UseVisualStyleBackColor = true;
@@ -61,7 +62,7 @@
             this.textRegister.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textRegister.ForeColor = System.Drawing.Color.White;
             this.textRegister.LinkColor = System.Drawing.Color.White;
-            this.textRegister.Location = new System.Drawing.Point(175, 424);
+            this.textRegister.Location = new System.Drawing.Point(183, 444);
             this.textRegister.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.textRegister.Name = "textRegister";
             this.textRegister.Size = new System.Drawing.Size(81, 17);
@@ -75,7 +76,7 @@
             this.lblEmail.AutoSize = true;
             this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmail.ForeColor = System.Drawing.Color.White;
-            this.lblEmail.Location = new System.Drawing.Point(70, 205);
+            this.lblEmail.Location = new System.Drawing.Point(72, 205);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(57, 17);
@@ -87,7 +88,7 @@
             this.lblPassword.AutoSize = true;
             this.lblPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblPassword.ForeColor = System.Drawing.Color.White;
-            this.lblPassword.Location = new System.Drawing.Point(70, 277);
+            this.lblPassword.Location = new System.Drawing.Point(72, 277);
             this.lblPassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(91, 17);
@@ -100,7 +101,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(207, 393);
+            this.label1.Location = new System.Drawing.Point(214, 413);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(19, 17);
@@ -124,7 +125,7 @@
             this.panelPassword.BackColor = System.Drawing.Color.White;
             this.panelPassword.Controls.Add(this.txtPassword);
             this.panelPassword.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.panelPassword.Location = new System.Drawing.Point(73, 297);
+            this.panelPassword.Location = new System.Drawing.Point(75, 297);
             this.panelPassword.Name = "panelPassword";
             this.panelPassword.Size = new System.Drawing.Size(300, 30);
             this.panelPassword.TabIndex = 4;
@@ -145,11 +146,23 @@
             this.panelEmail.BackColor = System.Drawing.Color.White;
             this.panelEmail.Controls.Add(this.txtEmail);
             this.panelEmail.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.panelEmail.Location = new System.Drawing.Point(73, 225);
+            this.panelEmail.Location = new System.Drawing.Point(75, 225);
             this.panelEmail.Name = "panelEmail";
             this.panelEmail.Size = new System.Drawing.Size(300, 30);
             this.panelEmail.TabIndex = 1;
             this.panelEmail.Click += new System.EventHandler(this.panelEmail_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(88, 75);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(274, 46);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Iniciar Sesión";
             // 
             // LoginForm
             // 
@@ -158,6 +171,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
             this.ClientSize = new System.Drawing.Size(450, 650);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.panelEmail);
             this.Controls.Add(this.panelPassword);
             this.Controls.Add(this.label1);
@@ -191,5 +205,6 @@
         private System.Windows.Forms.Label lblPassword;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonLogin;
+        private System.Windows.Forms.Label label3;
     }
 }

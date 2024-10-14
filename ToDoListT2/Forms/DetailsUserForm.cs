@@ -11,20 +11,20 @@ namespace Forms
             InitializeComponent();
         }
 
-        private void buttonExit_Click(object sender, System.EventArgs e)
+        private void DetailsUserForm_Load(object sender, System.EventArgs e)
+        {
+            lblEmail.Text = UserStore.User.Email;
+            lblName.Text = UserStore.User.Name;
+        }
+
+        private void btnBack_Click(object sender, System.EventArgs e)
         {
             NavigationHelper.NavigateTo(new HomeForm());
         }
 
-        private void buttonEdit_Click(object sender, System.EventArgs e)
+        private void pictureBox1_Click(object sender, System.EventArgs e)
         {
             NavigationHelper.NavigateToFloating(new EditUserForm());
-        }
-
-        private void DetailsUserForm_Load(object sender, System.EventArgs e)
-        {
-            lblEmail.Text = UserStore.User.Email;
-            lblUser.Text = UserStore.User.Name;
         }
     }
 }

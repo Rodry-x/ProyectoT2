@@ -28,109 +28,138 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.buttonExit = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DetailsUserForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.lblUser = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.PictureBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.buttonEdit = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // buttonExit
-            // 
-            this.buttonExit.Location = new System.Drawing.Point(21, 26);
-            this.buttonExit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonExit.Name = "buttonExit";
-            this.buttonExit.Size = new System.Drawing.Size(71, 43);
-            this.buttonExit.TabIndex = 0;
-            this.buttonExit.Text = "Salir";
-            this.buttonExit.UseVisualStyleBackColor = true;
-            this.buttonExit.Click += new System.EventHandler(this.buttonExit_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label1.ForeColor = System.Drawing.SystemColors.Control;
-            this.label1.Location = new System.Drawing.Point(89, 354);
+            this.label1.Location = new System.Drawing.Point(34, 179);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 26);
+            this.label1.Size = new System.Drawing.Size(73, 22);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Usuario:";
+            this.label1.Text = "Nombre";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label2.ForeColor = System.Drawing.SystemColors.Control;
-            this.label2.Location = new System.Drawing.Point(108, 406);
+            this.label2.Location = new System.Drawing.Point(34, 264);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 26);
+            this.label2.Size = new System.Drawing.Size(59, 22);
             this.label2.TabIndex = 2;
             this.label2.Text = "Email:";
             // 
-            // lblUser
+            // btnBack
             // 
-            this.lblUser.AutoSize = true;
-            this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblUser.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblUser.Location = new System.Drawing.Point(188, 354);
-            this.lblUser.Name = "lblUser";
-            this.lblUser.Size = new System.Drawing.Size(54, 26);
-            this.lblUser.TabIndex = 3;
-            this.lblUser.Text = "user";
+            this.btnBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBack.Image = ((System.Drawing.Image)(resources.GetObject("btnBack.Image")));
+            this.btnBack.Location = new System.Drawing.Point(15, 10);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(40, 40);
+            this.btnBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnBack.TabIndex = 15;
+            this.btnBack.TabStop = false;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(47, 72);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(355, 46);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Datos del Usuario";
+            // 
+            // lblName
+            // 
+            this.lblName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.lblName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblName.ForeColor = System.Drawing.Color.White;
+            this.lblName.Location = new System.Drawing.Point(35, 201);
+            this.lblName.Name = "lblName";
+            this.lblName.Padding = new System.Windows.Forms.Padding(8);
+            this.lblName.Size = new System.Drawing.Size(380, 34);
+            this.lblName.TabIndex = 17;
+            this.lblName.Text = "Ejemplo de Nombre";
+            this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblEmail
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.lblEmail.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblEmail.Location = new System.Drawing.Point(188, 406);
+            this.lblEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.lblEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmail.ForeColor = System.Drawing.Color.White;
+            this.lblEmail.Location = new System.Drawing.Point(35, 286);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(65, 26);
-            this.lblEmail.TabIndex = 4;
-            this.lblEmail.Text = "email";
+            this.lblEmail.Padding = new System.Windows.Forms.Padding(8);
+            this.lblEmail.Size = new System.Drawing.Size(380, 34);
+            this.lblEmail.TabIndex = 18;
+            this.lblEmail.Text = "ejemplo@email.com";
+            this.lblEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // buttonEdit
+            // pictureBox1
             // 
-            this.buttonEdit.Location = new System.Drawing.Point(248, 478);
-            this.buttonEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonEdit.Name = "buttonEdit";
-            this.buttonEdit.Size = new System.Drawing.Size(96, 36);
-            this.buttonEdit.TabIndex = 5;
-            this.buttonEdit.Text = "Editar";
-            this.buttonEdit.UseVisualStyleBackColor = true;
-            this.buttonEdit.Click += new System.EventHandler(this.buttonEdit_Click);
+            this.pictureBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(375, 377);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 19;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // DetailsUserForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(600, 800);
-            this.Controls.Add(this.buttonEdit);
+            this.ClientSize = new System.Drawing.Size(450, 650);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.lblUser);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.buttonExit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DetailsUserForm";
             this.Text = "DetailsUserForm";
             this.Load += new System.EventHandler(this.DetailsUserForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.btnBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button buttonExit;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.PictureBox btnBack;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Button buttonEdit;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

@@ -28,98 +28,120 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.msg_welcome = new System.Windows.Forms.Label();
             this.subTitelList = new System.Windows.Forms.Label();
             this.tasksList = new System.Windows.Forms.ListBox();
-            this.logout_btn = new System.Windows.Forms.Button();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonSettings = new System.Windows.Forms.Button();
+            this.btnLogout = new System.Windows.Forms.PictureBox();
+            this.btnConfig = new System.Windows.Forms.PictureBox();
+            this.btnAdd = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnConfig)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).BeginInit();
             this.SuspendLayout();
             // 
             // msg_welcome
             // 
+            this.msg_welcome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.msg_welcome.AutoEllipsis = true;
             this.msg_welcome.AutoSize = true;
             this.msg_welcome.BackColor = System.Drawing.Color.Transparent;
-            this.msg_welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F);
+            this.msg_welcome.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold);
             this.msg_welcome.ForeColor = System.Drawing.SystemColors.Control;
-            this.msg_welcome.Location = new System.Drawing.Point(11, 74);
+            this.msg_welcome.Location = new System.Drawing.Point(17, 75);
+            this.msg_welcome.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.msg_welcome.Name = "msg_welcome";
-            this.msg_welcome.Size = new System.Drawing.Size(346, 58);
+            this.msg_welcome.Size = new System.Drawing.Size(183, 37);
             this.msg_welcome.TabIndex = 0;
-            this.msg_welcome.Text = "msg_welcome";
+            this.msg_welcome.Text = "Bienvenido";
             // 
             // subTitelList
             // 
             this.subTitelList.AutoSize = true;
             this.subTitelList.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.subTitelList.ForeColor = System.Drawing.SystemColors.Control;
-            this.subTitelList.Location = new System.Drawing.Point(15, 143);
+            this.subTitelList.Location = new System.Drawing.Point(21, 170);
+            this.subTitelList.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.subTitelList.Name = "subTitelList";
-            this.subTitelList.Size = new System.Drawing.Size(194, 25);
+            this.subTitelList.Size = new System.Drawing.Size(159, 20);
             this.subTitelList.TabIndex = 2;
-            this.subTitelList.Text = "Quieres anotar algo?";
+            this.subTitelList.Text = "Estas son tus tareas:";
             // 
             // tasksList
             // 
+            this.tasksList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.tasksList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.tasksList.Cursor = System.Windows.Forms.Cursors.Default;
+            this.tasksList.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tasksList.ForeColor = System.Drawing.Color.White;
             this.tasksList.FormattingEnabled = true;
             this.tasksList.ItemHeight = 16;
-            this.tasksList.Location = new System.Drawing.Point(20, 242);
-            this.tasksList.Margin = new System.Windows.Forms.Padding(3, 16, 3, 16);
+            this.tasksList.Location = new System.Drawing.Point(25, 202);
+            this.tasksList.Margin = new System.Windows.Forms.Padding(0);
             this.tasksList.Name = "tasksList";
-            this.tasksList.Size = new System.Drawing.Size(564, 516);
+            this.tasksList.Size = new System.Drawing.Size(400, 416);
             this.tasksList.TabIndex = 3;
             this.tasksList.DoubleClick += new System.EventHandler(this.List_DoubleClick);
             // 
-            // logout_btn
+            // btnLogout
             // 
-            this.logout_btn.Location = new System.Drawing.Point(20, 27);
-            this.logout_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.logout_btn.Name = "logout_btn";
-            this.logout_btn.Size = new System.Drawing.Size(108, 36);
-            this.logout_btn.TabIndex = 4;
-            this.logout_btn.Text = "Cerrar Sesión";
-            this.logout_btn.UseVisualStyleBackColor = true;
-            this.logout_btn.Click += new System.EventHandler(this.ButtonLogout_Click);
+            this.btnLogout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.btnLogout.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
+            this.btnLogout.Location = new System.Drawing.Point(25, 12);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(40, 40);
+            this.btnLogout.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnLogout.TabIndex = 12;
+            this.btnLogout.TabStop = false;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
-            // buttonAdd
+            // btnConfig
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(465, 183);
-            this.buttonAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(120, 41);
-            this.buttonAdd.TabIndex = 10;
-            this.buttonAdd.Text = "Añadir";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.ButtonAdd_Click);
+            this.btnConfig.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.btnConfig.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfig.Image = ((System.Drawing.Image)(resources.GetObject("btnConfig.Image")));
+            this.btnConfig.Location = new System.Drawing.Point(385, 12);
+            this.btnConfig.Name = "btnConfig";
+            this.btnConfig.Size = new System.Drawing.Size(40, 40);
+            this.btnConfig.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnConfig.TabIndex = 13;
+            this.btnConfig.TabStop = false;
+            this.btnConfig.Click += new System.EventHandler(this.btnConfig_Click);
             // 
-            // buttonSettings
+            // btnAdd
             // 
-            this.buttonSettings.Location = new System.Drawing.Point(465, 27);
-            this.buttonSettings.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonSettings.Name = "buttonSettings";
-            this.buttonSettings.Size = new System.Drawing.Size(120, 36);
-            this.buttonSettings.TabIndex = 11;
-            this.buttonSettings.Text = "Configuración";
-            this.buttonSettings.UseVisualStyleBackColor = true;
-            this.buttonSettings.Click += new System.EventHandler(this.buttonSettings_Click);
+            this.btnAdd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.btnAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAdd.Image = ((System.Drawing.Image)(resources.GetObject("btnAdd.Image")));
+            this.btnAdd.Location = new System.Drawing.Point(385, 150);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(40, 40);
+            this.btnAdd.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnAdd.TabIndex = 14;
+            this.btnAdd.TabStop = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // HomeForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(600, 800);
-            this.Controls.Add(this.buttonSettings);
-            this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.logout_btn);
+            this.ClientSize = new System.Drawing.Size(450, 650);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnConfig);
+            this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.tasksList);
             this.Controls.Add(this.subTitelList);
             this.Controls.Add(this.msg_welcome);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "HomeForm";
             this.Text = "Lista";
             this.Load += new System.EventHandler(this.HomeForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.btnLogout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnConfig)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAdd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -130,9 +152,9 @@
         private System.Windows.Forms.Label msg_welcome;
         private System.Windows.Forms.Label subTitelList;
         private System.Windows.Forms.ListBox tasksList;
-        private System.Windows.Forms.Button logout_btn;
-        private System.Windows.Forms.Button buttonAdd;
-        private System.Windows.Forms.Button buttonSettings;
+        private System.Windows.Forms.PictureBox btnLogout;
+        private System.Windows.Forms.PictureBox btnConfig;
+        private System.Windows.Forms.PictureBox btnAdd;
     }
 }
 

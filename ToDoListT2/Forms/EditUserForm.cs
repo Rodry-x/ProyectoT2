@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
 using Helpers;
-using Models;
 using Stores;
 
 namespace Forms
@@ -13,44 +12,40 @@ namespace Forms
             InitializeComponent();
         }
 
-        private async void EditUser()
+        private void EditUserForm_Load(object sender, EventArgs e)
         {
-            try
+            txtUser.Text = UserStore.User.Name;
+            txtEmail.Text = UserStore.User.Email;
+        }
+
+        private async void btnAccept_Click(object sender, EventArgs e)
+        {
+            var success = await UserStore.editUser(txtUser.Text, txtEmail.Text);
+            if (success)
             {
-                var body = new PutUserBodyRequest
-                {
-                    name = input_userName.Text,
-                    email = input_userEmail.Text,
-                    password = input_userPassword.Text
-                };
-                var success = await FetchHelper.PutAsync($"users/{UserStore.User.Id}", body);
-                if (success)
-                {
-                    UserStore.User.Name = input_userName.Text;
-                    UserStore.User.Email = input_userEmail.Text;
-                    UserStore.User.Password = input_userPassword.Text;
-                    MessageBox.Show("Usuario actualizado");
-                }
-                else
-                {
-                    MessageBox.Show("Error al actualizar el usuario");
-                }
+                NavigationHelper.NavigateTo(new DetailsUserForm());
+                MessageBox.Show("Usuario actualizado");
+                NavigationHelper.CloseFloating();
             }
-            catch (Exception ex)
+            else
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                MessageBox.Show("Error al actualizar el usuario");
             }
         }
 
-        private void buttonSave_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
-            EditUser();
             NavigationHelper.NavigateTo(new DetailsUserForm());
         }
 
-        private void buttonCancel_Click(object sender, EventArgs e)
+        private void panelUser_Click(object sender, EventArgs e)
         {
-            NavigationHelper.NavigateTo(new DetailsUserForm());
+            txtUser.Focus();
+        }
+
+        private void panelEmail_Paint(object sender, PaintEventArgs e)
+        {
+            txtEmail.Focus();
         }
     }
 }

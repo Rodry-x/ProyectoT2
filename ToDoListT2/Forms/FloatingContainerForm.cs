@@ -11,8 +11,20 @@ namespace Forms
         public FloatingContainerForm(Form form)
         {
             InitializeComponent();
+            NavigationHelper._floatingContainerForm = this;
             ShowForm(form);
         }
+
+        public void SetLoading()
+        {
+            panelLoading.Visible = true;
+        }
+
+        public void RemoveLoading()
+        {
+            panelLoading.Visible = false;
+        }
+
         private void ShowForm(Form form)
         {
             Debug.WriteLine(form);

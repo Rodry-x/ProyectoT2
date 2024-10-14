@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using Helpers;
+using System.Drawing;
 
 namespace Forms
 {
@@ -11,6 +12,7 @@ namespace Forms
         public ContainerForm()
         {
             InitializeComponent();
+            AppHelper._containerForm = this;
             NavigationHelper._containerForm = this;
             NavigationHelper.NavigateTo(new LoginForm());
         }
@@ -23,6 +25,17 @@ namespace Forms
             panelContainer.Controls.Add(form);
             form.Show();
         }
+
+        public void SetLoading()
+        {
+            panelLoading.Visible = true;
+        }
+
+        public void RemoveLoading()
+        {
+            panelLoading.Visible = false;
+        }
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private static extern void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]

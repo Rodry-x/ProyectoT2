@@ -26,12 +26,7 @@ namespace Forms
             NavigationHelper.NavigateTo(new DetailsForm(selectedTaskIndex));
         }
 
-        private void ButtonAdd_Click(object sender, EventArgs e)
-        {
-            NavigationHelper.NavigateToFloating(new AddTaskForm());
-        }
-
-        private void ButtonLogout_Click(object sender, EventArgs e)
+        private void btnLogout_Click(object sender, EventArgs e)
         {
             TasksStore.Clear();
             UserStore.Clear();
@@ -39,9 +34,14 @@ namespace Forms
             NavigationHelper.NavigateTo(new LoginForm());
         }
 
-        private void buttonSettings_Click(object sender, EventArgs e)
+        private void btnConfig_Click(object sender, EventArgs e)
         {
             NavigationHelper.NavigateTo(new DetailsUserForm());
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.NavigateToFloating(new AddTaskForm());
         }
     }
 }

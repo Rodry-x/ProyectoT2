@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+using Forms;
 using Helpers;
 using Models;
 
@@ -12,6 +14,7 @@ namespace Stores
 
         public static async Task register(string name, string email, string password)
         {
+            AppHelper.SetLoading();
             try
             {
                 var body = new RegisterBodyRequest
@@ -27,10 +30,15 @@ namespace Stores
             {
                 Debug.WriteLine($"Error: {ex.Message}");
             }
+            finally
+            {
+                AppHelper.RemoveLoading();
+            }
         }
 
         public static async Task<bool> login(string email, string password)
         {
+            AppHelper.SetLoading();
             try
             {
                 var body = new LoginBodyRequest
@@ -56,7 +64,38 @@ namespace Stores
                 Debug.WriteLine($"Error: {ex.Message}");
                 return false;
             }
+            finally
+            {
+                AppHelper.RemoveLoading();
+            }
         }
+
+        public static async Task<bool> editUser(string name, string email)
+        {
+            AppHelper.SetFloatingLoading();
+            try
+            {
+                var body = new PutUserBodyRequest
+                {
+                    name = name,
+                    email = email,
+                };
+                var success = await FetchHelper.PutAsync($"users/{User.Id}", body);
+                User.Name = name;
+                User.Email = email;
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+                return false;
+            }
+            finally
+            {
+                AppHelper.RemoveFloatingLoading();
+            }
+        }
+
         public static void Clear()
         {
             User = new User();

@@ -53,6 +53,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\StyledButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Components\StyledButton.Designer.cs">
+      <DependentUpon>StyledButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\AddTaskForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,7 @@
     <Compile Include="Forms\RegisterForm.Designer.cs">
       <DependentUpon>RegisterForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\AppHelper.cs" />
     <Compile Include="Helpers\FetchHelper.cs" />
     <Compile Include="Helpers\NavigationHelper.cs" />
     <Compile Include="Models\Login.cs" />
@@ -128,6 +135,9 @@
     </Compile>
     <Compile Include="Stores\TasksStore.cs" />
     <Compile Include="Stores\UserStore.cs" />
+    <EmbeddedResource Include="Components\StyledButton.resx">
+      <DependentUpon>StyledButton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddTaskForm.resx">
       <DependentUpon>AddTaskForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -177,12 +187,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Components\" />
-  </ItemGroup>
-  <ItemGroup>
+    <Content Include="Assets\background_image.jpg" />
+    <Content Include="Assets\delete_icon.png" />
     <Content Include="Assets\close_icon.png" />
+    <Content Include="Assets\config_icon.png" />
+    <Content Include="Assets\done_icon.png" />
+    <Content Include="Assets\add_icon.png" />
+    <Content Include="Assets\back_icon.png" />
+    <Content Include="Assets\edit_icon.png" />
+    <Content Include="Assets\logout_icon.png" />
     <Content Include="Assets\minimize_icon.png" />
+    <Content Include="Assets\loading_icon.gif" />
+    <Content Include="Assets\loading_animated.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

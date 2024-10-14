@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using Helpers;
 using Models;
 using Stores;
@@ -15,45 +17,60 @@ namespace Forms
             taskIndex = selecTaskItem;
             InitializeComponent();
         }
-        private async void EditTask()
+
+        private void EditTaskForm_Load(object sender, EventArgs e)
         {
-            try
+            txtTitle.Text = TasksStore.Tasks[taskIndex].Name;
+            txtDescription.Text = TasksStore.Tasks[taskIndex].Description;
+            dtpDeadline.Value = TasksStore.Tasks[taskIndex].Deadline;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            NavigationHelper.CloseFloating();
+        }
+
+        private async void btnAccept_Click(object sender, EventArgs e)
+        {
+            var success = await TasksStore.editTask(
+                taskIndex,
+                txtTitle.Text,
+                txtDescription.Text,
+                dtpDeadline.Value
+            );
+            if (success)
             {
-                var body = new PutTaskBodyRequest
-                {
-                    name = input_taskName.Text,
-                    description = input_taskDescription.Text,
-                    deadline = input_taskDateTime.Value
-                };
-                var success = await FetchHelper.PutAsync($"tasks/{TasksStore.Tasks[taskIndex].Id}", body);
-                if (success)
-                {
-                    Debug.WriteLine(taskIndex);
-                    TasksStore.Tasks[taskIndex].Name = input_taskName.Text;
-                    TasksStore.Tasks[taskIndex].Description = input_taskDescription.Text;
-                    TasksStore.Tasks[taskIndex].Deadline = input_taskDateTime.Value;
-                    MessageBox.Show("Tarea actualizada");
-                    Close();
-                }
-                else
-                {
-                    MessageBox.Show("Error al actualizar la tarea");
-                }
+                MessageBox.Show("Tarea actualizada");
+                NavigationHelper.CloseFloating();
             }
-            catch (Exception ex)
+            else
             {
-                Console.WriteLine($"Error: {ex.Message}");
+                MessageBox.Show("Error al actualizar la tarea");
             }
         }
 
-        private void btAccept_Click(object sender, EventArgs e)
+        private async void btnDelete_Click(object sender, EventArgs e)
         {
-            EditTask();
+            var success = await TasksStore.deleteTask(taskIndex);
+            if (success)
+            {
+                MessageBox.Show("Tarea eliminada");
+                NavigationHelper.CloseFloating();
+            }
+            else
+            {
+                MessageBox.Show("Error al eliminar la tarea");
+            }
         }
 
-        private void btCancel_Click(object sender, EventArgs e)
+        private void panelTitle_MouseClick(object sender, MouseEventArgs e)
         {
-            Close();
+            txtTitle.Focus();
+        }
+
+        private void panelDescription_MouseClick(object sender, MouseEventArgs e)
+        {
+            txtDescription.Focus();
         }
     }
 }

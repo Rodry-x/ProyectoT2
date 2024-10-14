@@ -117,25 +117,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnBack.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAAJ9JREFUSEvtlDsKwkAQQLeIrUeIjRDvEPBOwWPFNLmLtloES8ETTN6EWQgEC9ld
-        q3nwmtnwNmw+wXHKIyInvOLZRvkg2uALlc7GeSB4xGlJi/RY2VI6xA740DLo8WSN1xjjA+5sKR1ieudP
-        LRsffP/gHfeW28Ji6gY3/L6BwgXljihCtNxDjhAt95pGiK4/tIuN80JYfxUjtjZynL8Swgy3XiR8PXb3
-        mAAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="pictureBox1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAACxIAAAsSAdLdfvwAAAEjSURBVEhL7ZW9TgJBFEa3hIaGRBKMT0BhIkFMUDFqbUfL
-        Q/hGVJY8CgWhVl7Bv84s55u9Q1x32AwTKsNJTrH33v3uZEKW7EgSeZ43cYSTCM/tnSt8wVMXsgsGhrjG
-        GBbYxjOc4g/OLKoKTZ183/BH/MJn1JK+xVWhqWvxzDF0JV6FP+A3infsWlQYBvSiZ2LlIPQVrpOLD7zG
-        Dl7YSBWaUQvo3aJCxSfe4QkucffB1ERPcJD6Pf49ucJXKkD6Amo3WDq51eOuVs1ixlEa5LmFpZNb62AL
-        noqy+7VswwXPB1nQwzE2rbRFs+hJW1CHZotXHP98wT6fit9q1jOyuCo09bF7c2NpvGLD4sIwcIkpSxQ+
-        sJh6GGxg7B+O1Gz9yY+EybINVhVp1mnsUK8AAAAASUVORK5CYII=
-</value>
-  </data>
+  <metadata name="panel1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
 </root>

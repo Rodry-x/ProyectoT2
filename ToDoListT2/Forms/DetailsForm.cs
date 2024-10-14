@@ -15,28 +15,6 @@ namespace Forms
             taskIndex = selectedTaskIndex;
         }
 
-        private async Task DeleteTask()
-        {
-            try
-            {
-                var success = await FetchHelper.DeleteAsync($"tasks/{TasksStore.Tasks[taskIndex].Id}");
-                if (success)
-                {
-                    TasksStore.Tasks.RemoveAt(taskIndex);
-                    MessageBox.Show("Tarea eliminada");
-                    NavigationHelper.NavigateTo(new HomeForm());
-                }
-                else
-                {
-                    MessageBox.Show("Error al eliminar la tarea");
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error: {ex.Message}");
-            }
-        }
-
         private void DetailsForm_Load(object sender, EventArgs e)
         {
             lblTaskName.DataBindings.Add("Text", TasksStore.Tasks[taskIndex], "Name");
@@ -44,19 +22,28 @@ namespace Forms
             lblTaskDeadline.DataBindings.Add("Text", TasksStore.Tasks[taskIndex], "Deadline");
         }
 
-        private void btnEditTask_Click(object sender, EventArgs e)
+        private async void btnDelete_Click(object sender, EventArgs e)
         {
-            NavigationHelper.NavigateToFloating(new EditTaskForm(taskIndex));
+            var success = await TasksStore.deleteTask(taskIndex);
+            if (success)
+            {
+                MessageBox.Show("Tarea eliminada");
+                NavigationHelper.NavigateTo(new HomeForm());
+            }
+            else
+            {
+                MessageBox.Show("Error al eliminar la tarea");
+            }
         }
 
-        private void backButton_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
             NavigationHelper.NavigateTo(new HomeForm());
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void btnEdit_Click(object sender, EventArgs e)
         {
-            DeleteTask();
+            NavigationHelper.NavigateToFloating(new EditTaskForm(taskIndex));
         }
     }
 }

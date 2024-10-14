@@ -28,143 +28,171 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.msg_addTask = new System.Windows.Forms.Label();
-            this.title_addTask = new System.Windows.Forms.Label();
-            this.input_taskName = new System.Windows.Forms.TextBox();
-            this.description_addTask = new System.Windows.Forms.Label();
-            this.input_taskDescription = new System.Windows.Forms.TextBox();
-            this.input_taskDateTime = new System.Windows.Forms.DateTimePicker();
-            this.date_addTask = new System.Windows.Forms.Label();
-            this.button_save = new System.Windows.Forms.Button();
-            this.button_cancel = new System.Windows.Forms.Button();
-            this.msg_required1 = new System.Windows.Forms.Label();
-            this.msg_required2 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddTaskForm));
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelDescription = new System.Windows.Forms.Panel();
+            this.txtDescription = new System.Windows.Forms.TextBox();
+            this.panelTitle = new System.Windows.Forms.Panel();
+            this.txtTitle = new System.Windows.Forms.TextBox();
+            this.btnAccept = new System.Windows.Forms.PictureBox();
+            this.btnCancel = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dtpDeadline = new System.Windows.Forms.DateTimePicker();
+            this.txtEdit = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panelDescription.SuspendLayout();
+            this.panelTitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAccept)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).BeginInit();
             this.SuspendLayout();
             // 
-            // msg_addTask
+            // label1
             // 
-            this.msg_addTask.AutoSize = true;
-            this.msg_addTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.msg_addTask.ForeColor = System.Drawing.SystemColors.Control;
-            this.msg_addTask.Location = new System.Drawing.Point(41, 21);
-            this.msg_addTask.Name = "msg_addTask";
-            this.msg_addTask.Size = new System.Drawing.Size(282, 48);
-            this.msg_addTask.TabIndex = 0;
-            this.msg_addTask.Text = "msg_addTask";
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(70, 150);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 22);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Descripción";
             // 
-            // title_addTask
+            // panelDescription
             // 
-            this.title_addTask.AutoSize = true;
-            this.title_addTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.title_addTask.ForeColor = System.Drawing.SystemColors.Control;
-            this.title_addTask.Location = new System.Drawing.Point(43, 88);
-            this.title_addTask.Name = "title_addTask";
-            this.title_addTask.Size = new System.Drawing.Size(44, 18);
-            this.title_addTask.TabIndex = 1;
-            this.title_addTask.Text = "Titulo";
+            this.panelDescription.BackColor = System.Drawing.Color.White;
+            this.panelDescription.Controls.Add(this.txtDescription);
+            this.panelDescription.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.panelDescription.Location = new System.Drawing.Point(74, 175);
+            this.panelDescription.Name = "panelDescription";
+            this.panelDescription.Size = new System.Drawing.Size(450, 30);
+            this.panelDescription.TabIndex = 23;
             // 
-            // input_taskName
+            // txtDescription
             // 
-            this.input_taskName.Location = new System.Drawing.Point(43, 115);
-            this.input_taskName.Name = "input_taskName";
-            this.input_taskName.Size = new System.Drawing.Size(841, 22);
-            this.input_taskName.TabIndex = 2;
+            this.txtDescription.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDescription.Location = new System.Drawing.Point(10, 7);
+            this.txtDescription.Margin = new System.Windows.Forms.Padding(2);
+            this.txtDescription.Name = "txtDescription";
+            this.txtDescription.Size = new System.Drawing.Size(430, 16);
+            this.txtDescription.TabIndex = 6;
             // 
-            // description_addTask
+            // panelTitle
             // 
-            this.description_addTask.AutoSize = true;
-            this.description_addTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.description_addTask.ForeColor = System.Drawing.SystemColors.Control;
-            this.description_addTask.Location = new System.Drawing.Point(40, 167);
-            this.description_addTask.Name = "description_addTask";
-            this.description_addTask.Size = new System.Drawing.Size(87, 18);
-            this.description_addTask.TabIndex = 3;
-            this.description_addTask.Text = "Descripción";
+            this.panelTitle.BackColor = System.Drawing.Color.White;
+            this.panelTitle.Controls.Add(this.txtTitle);
+            this.panelTitle.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.panelTitle.Location = new System.Drawing.Point(74, 104);
+            this.panelTitle.Name = "panelTitle";
+            this.panelTitle.Size = new System.Drawing.Size(450, 30);
+            this.panelTitle.TabIndex = 22;
             // 
-            // input_taskDescription
+            // txtTitle
             // 
-            this.input_taskDescription.Location = new System.Drawing.Point(42, 194);
-            this.input_taskDescription.Name = "input_taskDescription";
-            this.input_taskDescription.Size = new System.Drawing.Size(841, 22);
-            this.input_taskDescription.TabIndex = 4;
+            this.txtTitle.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitle.Location = new System.Drawing.Point(10, 7);
+            this.txtTitle.Margin = new System.Windows.Forms.Padding(2);
+            this.txtTitle.Name = "txtTitle";
+            this.txtTitle.Size = new System.Drawing.Size(430, 16);
+            this.txtTitle.TabIndex = 0;
             // 
-            // input_taskDateTime
+            // btnAccept
             // 
-            this.input_taskDateTime.Location = new System.Drawing.Point(43, 270);
-            this.input_taskDateTime.Name = "input_taskDateTime";
-            this.input_taskDateTime.Size = new System.Drawing.Size(175, 22);
-            this.input_taskDateTime.TabIndex = 5;
+            this.btnAccept.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.btnAccept.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAccept.Image = ((System.Drawing.Image)(resources.GetObject("btnAccept.Image")));
+            this.btnAccept.Location = new System.Drawing.Point(484, 294);
+            this.btnAccept.Name = "btnAccept";
+            this.btnAccept.Size = new System.Drawing.Size(40, 40);
+            this.btnAccept.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnAccept.TabIndex = 21;
+            this.btnAccept.TabStop = false;
+            this.btnAccept.Click += new System.EventHandler(this.btnAccept_Click);
             // 
-            // date_addTask
+            // btnCancel
             // 
-            this.date_addTask.AutoSize = true;
-            this.date_addTask.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F);
-            this.date_addTask.ForeColor = System.Drawing.SystemColors.Control;
-            this.date_addTask.Location = new System.Drawing.Point(43, 240);
-            this.date_addTask.Name = "date_addTask";
-            this.date_addTask.Size = new System.Drawing.Size(49, 18);
-            this.date_addTask.TabIndex = 6;
-            this.date_addTask.Text = "Fecha";
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.Image = ((System.Drawing.Image)(resources.GetObject("btnCancel.Image")));
+            this.btnCancel.Location = new System.Drawing.Point(429, 294);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(40, 40);
+            this.btnCancel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.btnCancel.TabIndex = 20;
+            this.btnCancel.TabStop = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
-            // button_save
+            // label2
             // 
-            this.button_save.Location = new System.Drawing.Point(42, 421);
-            this.button_save.Name = "button_save";
-            this.button_save.Size = new System.Drawing.Size(147, 50);
-            this.button_save.TabIndex = 7;
-            this.button_save.Text = "Guardar";
-            this.button_save.UseVisualStyleBackColor = true;
-            this.button_save.Click += new System.EventHandler(this.button_save_Click);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.Control;
+            this.label2.Location = new System.Drawing.Point(70, 225);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(106, 22);
+            this.label2.TabIndex = 18;
+            this.label2.Text = "Fecha límite";
             // 
-            // button_cancel
+            // dtpDeadline
             // 
-            this.button_cancel.Location = new System.Drawing.Point(727, 422);
-            this.button_cancel.Name = "button_cancel";
-            this.button_cancel.Size = new System.Drawing.Size(157, 49);
-            this.button_cancel.TabIndex = 8;
-            this.button_cancel.Text = "Cancelar";
-            this.button_cancel.UseVisualStyleBackColor = true;
-            this.button_cancel.Click += new System.EventHandler(this.button_cancel_Click);
+            this.dtpDeadline.Location = new System.Drawing.Point(74, 249);
+            this.dtpDeadline.Margin = new System.Windows.Forms.Padding(2);
+            this.dtpDeadline.Name = "dtpDeadline";
+            this.dtpDeadline.Size = new System.Drawing.Size(151, 20);
+            this.dtpDeadline.TabIndex = 17;
             // 
-            // msg_required1
+            // txtEdit
             // 
-            this.msg_required1.AutoSize = true;
-            this.msg_required1.Location = new System.Drawing.Point(88, 82);
-            this.msg_required1.Name = "msg_required1";
-            this.msg_required1.Size = new System.Drawing.Size(10, 16);
-            this.msg_required1.TabIndex = 9;
-            this.msg_required1.Text = ".";
+            this.txtEdit.AutoSize = true;
+            this.txtEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEdit.ForeColor = System.Drawing.SystemColors.Control;
+            this.txtEdit.Location = new System.Drawing.Point(70, 79);
+            this.txtEdit.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.txtEdit.Name = "txtEdit";
+            this.txtEdit.Size = new System.Drawing.Size(55, 22);
+            this.txtEdit.TabIndex = 15;
+            this.txtEdit.Text = "Titulo";
             // 
-            // msg_required2
+            // label3
             // 
-            this.msg_required2.AutoSize = true;
-            this.msg_required2.Location = new System.Drawing.Point(131, 140);
-            this.msg_required2.Name = "msg_required2";
-            this.msg_required2.Size = new System.Drawing.Size(10, 16);
-            this.msg_required2.TabIndex = 10;
-            this.msg_required2.Text = ".";
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Bold);
+            this.label3.ForeColor = System.Drawing.SystemColors.Control;
+            this.label3.Location = new System.Drawing.Point(120, 20);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(355, 46);
+            this.label3.TabIndex = 24;
+            this.label3.Text = "Crear nueva tarea";
             // 
             // AddTaskForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(37)))), ((int)(((byte)(37)))));
-            this.ClientSize = new System.Drawing.Size(914, 502);
-            this.Controls.Add(this.msg_required2);
-            this.Controls.Add(this.msg_required1);
-            this.Controls.Add(this.button_cancel);
-            this.Controls.Add(this.button_save);
-            this.Controls.Add(this.date_addTask);
-            this.Controls.Add(this.input_taskDateTime);
-            this.Controls.Add(this.input_taskDescription);
-            this.Controls.Add(this.description_addTask);
-            this.Controls.Add(this.input_taskName);
-            this.Controls.Add(this.title_addTask);
-            this.Controls.Add(this.msg_addTask);
+            this.ClientSize = new System.Drawing.Size(600, 360);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.panelDescription);
+            this.Controls.Add(this.panelTitle);
+            this.Controls.Add(this.btnAccept);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.dtpDeadline);
+            this.Controls.Add(this.txtEdit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AddTaskForm";
             this.Text = "AddTaskForm";
-            this.Load += new System.EventHandler(this.AddTaskForm_Load);
+            this.panelDescription.ResumeLayout(false);
+            this.panelDescription.PerformLayout();
+            this.panelTitle.ResumeLayout(false);
+            this.panelTitle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAccept)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,16 +200,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Label msg_addTask;
-        private System.Windows.Forms.Label title_addTask;
-        private System.Windows.Forms.TextBox input_taskName;
-        private System.Windows.Forms.Label description_addTask;
-        private System.Windows.Forms.TextBox input_taskDescription;
-        private System.Windows.Forms.DateTimePicker input_taskDateTime;
-        private System.Windows.Forms.Label date_addTask;
-        private System.Windows.Forms.Button button_save;
-        private System.Windows.Forms.Button button_cancel;
-        private System.Windows.Forms.Label msg_required1;
-        private System.Windows.Forms.Label msg_required2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panelDescription;
+        private System.Windows.Forms.TextBox txtDescription;
+        private System.Windows.Forms.Panel panelTitle;
+        private System.Windows.Forms.TextBox txtTitle;
+        private System.Windows.Forms.PictureBox btnAccept;
+        private System.Windows.Forms.PictureBox btnCancel;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DateTimePicker dtpDeadline;
+        private System.Windows.Forms.Label txtEdit;
+        private System.Windows.Forms.Label label3;
     }
 }
