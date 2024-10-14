@@ -1,5 +1,4 @@
 ﻿using Forms;
-using System.Drawing;
 
 public static class AppHelper
 {

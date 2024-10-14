@@ -11,7 +11,7 @@ namespace Forms
         public FloatingContainerForm(Form form)
         {
             InitializeComponent();
-            NavigationHelper._floatingContainerForm = this;
+            AppHelper._floatingContainerForm = this;
             ShowForm(form);
         }
 
