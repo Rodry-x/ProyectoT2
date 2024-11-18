@@ -34,5 +34,15 @@ namespace Forms
         {
             NavigationHelper.CloseFloating();
         }
+
+        private void panelTitle_Click(object sender, EventArgs e)
+        {
+            txtTitle.Focus();
+        }
+
+        private void panelDescription_Click(object sender, EventArgs e)
+        {
+            txtDescription.Focus();
+        }
     }
 }

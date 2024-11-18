@@ -74,7 +74,7 @@
             this.input_userName.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.input_userName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.input_userName.Location = new System.Drawing.Point(74, 134);
-            this.input_userName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.input_userName.Margin = new System.Windows.Forms.Padding(2);
             this.input_userName.Name = "input_userName";
             this.input_userName.Size = new System.Drawing.Size(450, 16);
             this.input_userName.TabIndex = 4;
@@ -84,7 +84,7 @@
             this.txtEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmail.Location = new System.Drawing.Point(10, 7);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(430, 16);
             this.txtEmail.TabIndex = 5;
@@ -98,7 +98,7 @@
             this.panelEmail.Name = "panelEmail";
             this.panelEmail.Size = new System.Drawing.Size(450, 30);
             this.panelEmail.TabIndex = 6;
-            this.panelEmail.Paint += new System.Windows.Forms.PaintEventHandler(this.panelEmail_Paint);
+            this.panelEmail.Click += new System.EventHandler(this.panelEmail_Click);
             // 
             // panelUser
             // 
@@ -174,7 +174,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EditUserForm";
             this.Text = "EditUserForm";
             this.Load += new System.EventHandler(this.EditUserForm_Load);

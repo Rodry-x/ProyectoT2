@@ -88,7 +88,7 @@
             this.panelName.Name = "panelName";
             this.panelName.Size = new System.Drawing.Size(300, 30);
             this.panelName.TabIndex = 10;
-            this.panelName.Paint += new System.Windows.Forms.PaintEventHandler(this.panelName_Paint);
+            this.panelName.Click += new System.EventHandler(this.panelName_Click);
             // 
             // panelEmail
             // 
@@ -99,7 +99,7 @@
             this.panelEmail.Name = "panelEmail";
             this.panelEmail.Size = new System.Drawing.Size(300, 30);
             this.panelEmail.TabIndex = 11;
-            this.panelEmail.Paint += new System.Windows.Forms.PaintEventHandler(this.panelEmail_Paint);
+            this.panelEmail.Click += new System.EventHandler(this.panelEmail_Click);
             // 
             // txtEmail
             // 
@@ -120,7 +120,7 @@
             this.panelPassword.Name = "panelPassword";
             this.panelPassword.Size = new System.Drawing.Size(300, 30);
             this.panelPassword.TabIndex = 11;
-            this.panelPassword.Paint += new System.Windows.Forms.PaintEventHandler(this.panelPassword_Paint);
+            this.panelPassword.Click += new System.EventHandler(this.panelPassword_Click);
             // 
             // txtPassword
             // 

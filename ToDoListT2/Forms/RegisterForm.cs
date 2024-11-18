@@ -28,18 +28,16 @@ namespace Forms
             );
             NavigationHelper.NavigateTo(new HomeForm());
         }
-
-        private void panelName_Paint(object sender, PaintEventArgs e)
+        private void panelName_Click(object sender, EventArgs e)
         {
             txtUser.Focus();
         }
 
-        private void panelEmail_Paint(object sender, PaintEventArgs e)
+        private void panelEmail_Click(object sender, EventArgs e)
         {
             txtEmail.Focus();
         }
-
-        private void panelPassword_Paint(object sender, PaintEventArgs e)
+        private void panelPassword_Click(object sender, EventArgs e)
         {
             txtPassword.Focus();
         }

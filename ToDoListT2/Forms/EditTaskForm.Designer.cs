@@ -145,7 +145,7 @@
             this.panelTitle.Name = "panelTitle";
             this.panelTitle.Size = new System.Drawing.Size(450, 30);
             this.panelTitle.TabIndex = 13;
-            this.panelTitle.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelTitle_MouseClick);
+            this.panelTitle.Click += new System.EventHandler(this.panelTitle_Click);
             // 
             // panelDescription
             // 
@@ -156,7 +156,7 @@
             this.panelDescription.Name = "panelDescription";
             this.panelDescription.Size = new System.Drawing.Size(450, 30);
             this.panelDescription.TabIndex = 14;
-            this.panelDescription.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelDescription_MouseClick);
+            this.panelDescription.Click += new System.EventHandler(this.panelDescription_Click);
             // 
             // label3
             // 

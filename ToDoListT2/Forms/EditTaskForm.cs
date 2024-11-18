@@ -49,12 +49,12 @@ namespace Forms
             }
         }
 
-        private void panelTitle_MouseClick(object sender, MouseEventArgs e)
+        private void panelTitle_Click(object sender, EventArgs e)
         {
             txtTitle.Focus();
         }
 
-        private void panelDescription_MouseClick(object sender, MouseEventArgs e)
+        private void panelDescription_Click(object sender, EventArgs e)
         {
             txtDescription.Focus();
         }

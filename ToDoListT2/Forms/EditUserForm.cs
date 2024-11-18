@@ -43,7 +43,7 @@ namespace Forms
             txtUser.Focus();
         }
 
-        private void panelEmail_Paint(object sender, PaintEventArgs e)
+        private void panelEmail_Click(object sender, EventArgs e)
         {
             txtEmail.Focus();
         }

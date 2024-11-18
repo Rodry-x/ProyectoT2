@@ -67,6 +67,7 @@
             this.panelDescription.Name = "panelDescription";
             this.panelDescription.Size = new System.Drawing.Size(450, 30);
             this.panelDescription.TabIndex = 23;
+            this.panelDescription.Click += new System.EventHandler(this.panelDescription_Click);
             // 
             // txtDescription
             // 
@@ -87,6 +88,7 @@
             this.panelTitle.Name = "panelTitle";
             this.panelTitle.Size = new System.Drawing.Size(450, 30);
             this.panelTitle.TabIndex = 22;
+            this.panelTitle.Click += new System.EventHandler(this.panelTitle_Click);
             // 
             // txtTitle
             // 
@@ -184,7 +186,7 @@
             this.Controls.Add(this.dtpDeadline);
             this.Controls.Add(this.txtEdit);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddTaskForm";
             this.Text = "AddTaskForm";
             this.panelDescription.ResumeLayout(false);
