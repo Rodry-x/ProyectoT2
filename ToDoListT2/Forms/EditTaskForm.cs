@@ -49,20 +49,6 @@ namespace Forms
             }
         }
 
-        private async void btnDelete_Click(object sender, EventArgs e)
-        {
-            var success = await TasksStore.deleteTask(taskIndex);
-            if (success)
-            {
-                MessageBox.Show("Tarea eliminada");
-                NavigationHelper.CloseFloating();
-            }
-            else
-            {
-                MessageBox.Show("Error al eliminar la tarea");
-            }
-        }
-
         private void panelTitle_MouseClick(object sender, MouseEventArgs e)
         {
             txtTitle.Focus();

@@ -35,13 +35,11 @@
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpDeadline = new System.Windows.Forms.DateTimePicker();
-            this.btnDelete = new System.Windows.Forms.PictureBox();
             this.btnCancel = new System.Windows.Forms.PictureBox();
             this.btnAccept = new System.Windows.Forms.PictureBox();
             this.panelTitle = new System.Windows.Forms.Panel();
             this.panelDescription = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAccept)).BeginInit();
             this.panelTitle.SuspendLayout();
@@ -111,19 +109,6 @@
             this.dtpDeadline.Name = "dtpDeadline";
             this.dtpDeadline.Size = new System.Drawing.Size(151, 20);
             this.dtpDeadline.TabIndex = 7;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(22)))), ((int)(((byte)(22)))));
-            this.btnDelete.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDelete.Image = ((System.Drawing.Image)(resources.GetObject("btnDelete.Image")));
-            this.btnDelete.Location = new System.Drawing.Point(74, 294);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(40, 40);
-            this.btnDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.btnDelete.TabIndex = 10;
-            this.btnDelete.TabStop = false;
-            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnCancel
             // 
@@ -198,7 +183,6 @@
             this.Controls.Add(this.panelTitle);
             this.Controls.Add(this.btnAccept);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtpDeadline);
             this.Controls.Add(this.txtEdit);
@@ -207,7 +191,6 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "EditTaskForm";
             this.Load += new System.EventHandler(this.EditTaskForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnCancel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnAccept)).EndInit();
             this.panelTitle.ResumeLayout(false);
@@ -228,7 +211,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.PictureBox btnDelete;
         private System.Windows.Forms.PictureBox btnCancel;
         private System.Windows.Forms.PictureBox btnAccept;
         private System.Windows.Forms.Panel panelTitle;
