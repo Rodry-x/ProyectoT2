@@ -35,7 +35,7 @@ namespace Forms
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            NavigationHelper.NavigateTo(new DetailsUserForm());
+            NavigationHelper.CloseFloating();
         }
 
         private void panelUser_Click(object sender, EventArgs e)
