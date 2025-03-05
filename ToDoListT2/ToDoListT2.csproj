@@ -53,12 +53,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Components\StyledButton.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Components\StyledButton.Designer.cs">
-      <DependentUpon>StyledButton.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\AddTaskForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,9 +129,6 @@
     </Compile>
     <Compile Include="Stores\TasksStore.cs" />
     <Compile Include="Stores\UserStore.cs" />
-    <EmbeddedResource Include="Components\StyledButton.resx">
-      <DependentUpon>StyledButton.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddTaskForm.resx">
       <DependentUpon>AddTaskForm.cs</DependentUpon>
     </EmbeddedResource>
